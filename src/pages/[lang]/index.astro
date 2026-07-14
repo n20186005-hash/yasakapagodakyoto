@@ -3,6 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionNav from '../../components/SectionNav.astro';
 import Hero from '../../components/Hero.astro';
+import QuickFactsDashboard from '../../components/QuickFactsDashboard.astro';
+import ComplianceGuide from '../../components/ComplianceGuide.astro';
+import HigashiyamaRoute from '../../components/HigashiyamaRoute.astro';
 import Intro from '../../components/Intro.astro';
 import Transport from '../../components/Transport.astro';
 import InfoSection from '../../components/InfoSection.astro';
@@ -10,7 +13,7 @@ import ScienceArt from '../../components/ScienceArt.astro';
 import OutdoorMuseum from '../../components/OutdoorMuseum.astro';
 import Gallery from '../../components/Gallery.astro';
 import FeaturedQuotes from '../../components/FeaturedQuotes.astro';
-import VisitGuide from '../../components/VisitGuide.astro';
+import HiddenRules from '../../components/HiddenRules.astro';
 import Reviews from '../../components/Reviews.astro';
 import MapEmbed from '../../components/MapEmbed.astro';
 import DeepDive from '../../components/DeepDive.astro';
@@ -22,19 +25,39 @@ export function getStaticPaths() {
 }
 
 const { messages } = getI18n(Astro.url);
+const faq = messages.faq;
+const faqLd = (() => {
+  const categories = faq?.categories ?? [];
+  const mainEntity = categories.flatMap((cat) =>
+    (cat.items ?? []).map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  );
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity,
+  };
+})();
 ---
 
 <BaseLayout title={messages.meta.title} description={messages.meta.description} path="">
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>
   <Breadcrumbs />
   <SectionNav />
   <Hero />
+  <QuickFactsDashboard />
+  <ComplianceGuide />
+  <HigashiyamaRoute />
   <Intro />
-  <InfoSection />
-  <ScienceArt />
-  <OutdoorMuseum />
   <Transport />
   <FeaturedQuotes />
-  <VisitGuide />
+  <ScienceArt />
+  <OutdoorMuseum />
+  <HiddenRules />
+  <InfoSection />
   <Gallery />
   <Reviews />
   <MapEmbed />

@@ -28,20 +28,21 @@
   },
   "breadcrumb": {
     "home": "Home",
-    "tokyoAttractions": "Kyoto Attractions",
-    "minato": "Higashiyama",
-    "odaibaPark": "Kiyomizu · Yasaka",
+    "kyoto": "Kyoto",
+    "higashiyama": "Higashiyama",
     "current": "Yasaka Pagoda"
   },
   "stickyNav": {
-    "overview": "Overview",
+    "facts": "Quick Facts",
+    "etiquette": "Do/Don't",
+    "route": "3-Hour Route",
     "transport": "Getting Here",
-    "history": "History",
-    "guide": "Guide"
+    "visit": "Visit Rules",
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Hōkan-ji Temple (Yasaka Pagoda)",
-    "subtitle": "A wooden five-story pagoda standing in Kyoto's Higashiyama–Kiyomizu district, designated an Important Cultural Property of Japan. The present structure was rebuilt in 1440 by Shōgun Ashikaga Yoshinori and rises about 46 metres — the most recognisable ancient silhouette on the Higashiyama skyline. It survived the Ōnin War and countless fires, and still watches over the Ninenzaka, Sannenzaka lanes and Gion in vermilion and natural timber.",
+    "subtitle": "A five-story wooden pagoda silhouette in Kyoto’s Higashiyama–Kiyomizu townscape: always visible from the streets, and sometimes open for interior visits on weekends (subject to on-site notice).",
     "rating": "4.6 (5,877)",
     "reviewCount": "5,877 reviews",
     "hours": "Sat–Sun 10:00–15:00 (interior)",
@@ -57,17 +58,94 @@
       "href": "#history"
     },
     "quickFacts": [
-      { "icon": "🎟️", "label": "Free exterior viewing", "value": "No ticket needed" },
-      { "icon": "🕒", "label": "Sat & Sun", "value": "10:00–15:00" },
-      { "icon": "📍", "label": "Higashiyama · Kiyomizu", "value": "Yasakakamimachi" }
+      { "icon": "🏗️", "label": "Rebuilt", "value": "1440" },
+      { "icon": "📏", "label": "Height", "value": "~46 m" },
+      { "icon": "🎟️", "label": "Interior fee", "value": "¥500" }
     ],
     "navCta": { "label": "📍 Get Directions", "href": "#transport" },
     "photoCta": { "label": "📸 Best Photo Spots", "href": "#gallery" },
     "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" }
   },
+  "quickFactsDashboard": {
+    "title": "Quick Facts Dashboard",
+    "subtitle": "Put the hard numbers up front to reduce repetition and make planning faster.",
+    "items": [
+      { "icon": "🏯", "label": "Built (legend)", "value": "AD 592 (trad.)", "note": "Tradition attributes the temple’s founding to Prince Shōtoku in the Asuka period." },
+      { "icon": "🏗️", "label": "Rebuilt (current)", "value": "AD 1440", "note": "The present tower dates to the Muromachi period, rebuilt under Ashikaga Yoshinori." },
+      { "icon": "📏", "label": "Height", "value": "~46 m", "note": "One of the most recognisable silhouettes on the Higashiyama skyline." },
+      { "icon": "🏛️", "label": "Status", "value": "Important Cultural Property", "note": "Designated in 1960." }
+    ]
+  },
+  "hiddenRules": {
+    "title": "Hidden Rules for the Interior Visit",
+    "subtitle": "Many visitors notice “weekend opening” but miss the on-site constraints that matter most. Know them early to avoid wasted detours.",
+    "highlights": [
+      { "icon": "🎟️", "label": "Admission", "value": "¥500 for interior", "note": "Street viewing is free; interior access requires a ticket when open." },
+      { "icon": "🕒", "label": "Typical opening", "value": "Sat–Sun 10:00–15:00", "note": "Not guaranteed; always follow on-site signs and staff guidance." },
+      { "icon": "⚠️", "label": "Stairs", "value": "Very steep & narrow", "note": "Travel light; avoid high heels and outfits that restrict movement." }
+    ],
+    "panels": [
+      {
+        "q": "Ticket & scope: what’s “free” and what’s “paid”?",
+        "a": "The pagoda stands in an open townscape, so you can view and photograph it from public streets at any time. Interior access (climbing inside) requires paid admission when the site is open.",
+        "items": ["Exterior viewing: free, always visible from the lanes.", "Interior visit: usually weekends only; ticket on site."]
+      },
+      {
+        "q": "Safety: who should NOT go inside, and what to prepare?",
+        "a": "The internal wooden stairs are steep and ladder-like, with tight passing space.",
+        "items": ["Children and anyone with mobility issues: not recommended.", "Footwear & luggage: avoid heels; do not bring large bags.", "Crowd etiquette: passing is difficult—follow staff directions."]
+      },
+      {
+        "q": "Why can it be closed even on weekends?",
+        "a": "Openings may change due to weather, ceremonies, staffing, and safety. Treat the interior visit as a bonus; plan your main route around exterior photo spots and the broader Higashiyama walk."
+      }
+    ]
+  },
+  "complianceGuide": {
+    "title": "Higashiyama Etiquette & Photography Compliance",
+    "subtitle": "Higashiyama has faced overtourism pressure in recent years. Following local rules protects residents and the historic streetscape.",
+    "rules": [
+      {
+        "badge": "🚫",
+        "title": "Do not enter private lanes for photos",
+        "text": "Some side alleys around the pagoda are private passages with warning signs and cameras. Do not step in to shoot.",
+        "items": ["If you see “Private Road” / camera notices, stop and turn back.", "Shoot from public roads only and keep the walkway clear."]
+      },
+      {
+        "badge": "🚫",
+        "title": "No eating while walking",
+        "text": "Ninenzaka/Sannenzaka often ask visitors to eat only in designated spots to reduce spills and congestion.",
+        "items": ["Check where the shop allows eating, then stop and eat there.", "Be mindful of crowd flow, children and kimono wearers."]
+      },
+      {
+        "badge": "🚫",
+        "title": "Respect people in your frame",
+        "text": "Do not chase, block, grab, or shoot at close range without consent—especially with kimono wearers or geiko/maiko.",
+        "items": ["Ask before taking portraits or selfies with strangers.", "Avoid occupying the centre of the lane just for composition."]
+      },
+      {
+        "badge": "🗑️",
+        "title": "Carry your trash out",
+        "text": "Public bins are limited. Bring a small bag and take your waste back to your accommodation."
+      }
+    ]
+  },
+  "higashiyamaRoute": {
+    "title": "A 3-Hour “No Backtracking” Higashiyama Walk",
+    "subtitle": "Yasaka Pagoda is a 5–15 minute stop. Put it mid-route to spend your time on what matters most.",
+    "steps": [
+      { "title": "[Start] Kyoto Station → bus into Higashiyama", "meta": "Transit · ~30–45 min", "text": "Take a city bus toward Kiyomizu-michi / Gojō-zaka, then walk into the Kiyomizu area.", "tips": ["Leave early in peak seasons to avoid midday jams."] },
+      { "title": "[Stop 1] Kiyomizu-dera", "meta": "Visit · ~60–90 min", "text": "Arrive early to avoid the heaviest crowds. After the visit, walk down via Kiyomizu-zaka.", "tips": ["Morning light is softer for both photos and sightseeing."] },
+      { "title": "[Stop 2] Sannenzaka & Ninenzaka (downhill walk)", "meta": "Townscape · ~30–45 min", "text": "Stroll down the stone-paved slopes with machiya streetscape and small shops. Follow local rules such as “no eating while walking.”", "tips": ["Do not force your way against the flow during congestion."] },
+      { "title": "[Stop 3] Yasaka Pagoda (Hōkan-ji)", "meta": "Photos + optional interior · ~15–30 min", "text": "Get the classic composition at the intersection below the tower; if open, you may enter the pagoda (subject to on-site notice).", "tips": ["Travel light; the stairs are steep and narrow."] },
+      { "title": "[Stop 4] Kennin-ji or Yasaka Shrine", "meta": "Zen / local faith · ~45–60 min", "text": "Continue downhill toward Gion for a calmer temple/shrine experience and gardens." },
+      { "title": "[Finish] Hanamikoji (late afternoon)", "meta": "Dusk & dinner · ~30–60 min", "text": "Crowds concentrate at dusk—avoid chasing shots that block the lane. Wrap up with dinner nearby.", "tips": ["Treat “empty street photos” as a bonus, not a must."] }
+    ],
+    "disclaimer": "Timings are a reference. Peak crowds, weather and temporary restrictions can change walking speed significantly—adjust on site."
+  },
   "intro": {
     "title": "Discover Hōkan-ji Temple (Yasaka Pagoda)",
-    "description": "Hōkan-ji is a Buddhist temple in Kyoto's Higashiyama–Kiyomizu district, best known for the five-story pagoda popularly called 'Yasaka-no-tō'. According to tradition the temple was founded in the Asuka period (592) by Prince Shōtoku; the tower we see today was rebuilt in 1440 (Eikyō 12) by Shōgun Ashikaga Yoshinori, making it nearly six centuries old. About 46 metres tall, it is among the oldest and tallest surviving wooden five-story pagodas in Japan and was designated an Important Cultural Property in 1960. More than a Higashiyama landmark, it overlooks the Ninenzaka and Sannenzaka lanes and Gion, and is a quintessential 'symbol of Kyoto' in countless photographs.",
+    "description": "Hōkan-ji sits in Kyoto’s Higashiyama–Kiyomizu townscape. The five-story pagoda popularly called “Yasaka-no-tō” is iconic less because of long on-site time, and more because it is perfectly placed between Kiyomizu and Gion—many visitors stop for 5–15 minutes for classic street-level photos before continuing their walk.",
     "visitGuide": {
       "title": "Visitor Guide",
       "eyebrow": "Practical Planning",
@@ -243,6 +321,52 @@
   },
   "knowledge": {
     "title": "The History & Symbolism of the Yasaka Pagoda",
+    "timelineTitle": "Timeline: Key Milestones",
+    "engineeringTitle": "Inside the Craft: Wooden Engineering",
+    "timeline": [
+      {
+        "time": "AD 592 (trad.)",
+        "tag": "Origins",
+        "title": "An Asuka-period legend",
+        "text": "Tradition links Hōkan-ji to Prince Shōtoku. While early structures no longer survive, the area’s religious memory and townscape axis have long centred on this site."
+      },
+      {
+        "time": "AD 1440",
+        "tag": "Current tower",
+        "title": "Rebuilt in the Muromachi period",
+        "text": "The present five-story pagoda was rebuilt under Ashikaga Yoshinori, and stands among the oldest surviving wooden five-story pagodas in Japan."
+      },
+      {
+        "time": "1467–1477",
+        "tag": "Conflict & fire",
+        "title": "A rare survivor after the Ōnin War",
+        "text": "Higashiyama suffered repeated destruction through war and fire, yet the pagoda was preserved again and again—an unusually continuous physical witness of the district."
+      },
+      {
+        "time": "1960",
+        "tag": "Protection",
+        "title": "Designated an Important Cultural Property",
+        "text": "Its architectural value, historical continuity, and role in the Higashiyama landscape were officially recognised and protected by national law."
+      }
+    ],
+    "engineering": [
+      {
+        "title": "Shinbashira (central pillar): damping by relative motion",
+        "text": "A core idea of many Japanese pagodas is the shinbashira running through the tower. During earthquakes, relative motion between the core and outer structure can reduce stress concentration.",
+        "points": [
+          "More than a simple load-bearing post, it participates in dynamic response.",
+          "Often cited as a traditional concept associated with modern vibration-control thinking."
+        ]
+      },
+      {
+        "title": "Joinery & brackets (tokyō): flexibility with form",
+        "text": "Traditional joinery and layered bracket complexes allow controlled micro-movements and distribute loads, while shaping the iconic tiered eaves and their light-and-shadow rhythm.",
+        "points": [
+          "Tokyō is both structural and aesthetic.",
+          "Tier proportions define the “Higashiyama silhouette” at a distance."
+        ]
+      }
+    ],
     "sections": [
       {
         "id": "history",

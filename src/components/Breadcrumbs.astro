@@ -12,20 +12,16 @@ const b = messages.breadcrumb;
         <meta itemprop="position" content="1" />
       </li>
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">{b.tokyoAttractions}</span>
+        <a href={`/${lang}#overview`} itemprop="item"><span itemprop="name">{b.kyoto}</span></a>
         <meta itemprop="position" content="2" />
       </li>
       <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">{b.minato}</span>
+        <a href={`/${lang}#transport`} itemprop="item"><span itemprop="name">{b.higashiyama}</span></a>
         <meta itemprop="position" content="3" />
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">{b.odaibaPark}</span>
-        <meta itemprop="position" content="4" />
       </li>
       <li class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
         <span itemprop="name">{b.current}</span>
-        <meta itemprop="position" content="5" />
+        <meta itemprop="position" content="4" />
       </li>
     </ol>
   </div>
