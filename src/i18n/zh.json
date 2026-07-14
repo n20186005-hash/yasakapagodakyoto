@@ -68,7 +68,7 @@
   },
   "quickFactsDashboard": {
     "title": "秒懂古塔 · 数据看板",
-    "subtitle": "把基础信息集中呈现，减少重复叙述，便于速读与快速决策。",
+    "subtitle": "",
     "items": [
       { "icon": "🏯", "label": "建造年份 / Built", "value": "公元 592 年（传）", "note": "相传始建于飞鸟时代，由圣德太子创立。" },
       { "icon": "🏗️", "label": "现存重建 / Rebuilt", "value": "公元 1440 年", "note": "室町时代，将军足利义教重建的现存塔体。" },
