@@ -1,0 +1,677 @@
+{
+  "meta": {
+    "title": "Hōkan-ji Temple (Yasaka Pagoda) | Higashiyama, Kyoto, Japan",
+    "description": "The complete guide to Hōkan-ji Temple's Yasaka Pagoda: this Important Cultural Property five-story pagoda in Kyoto's Higashiyama district — its history, architectural beauty, how to get there, visitor reviews and the best photo spots."
+  },
+  "header": {
+    "siteName": "Hōkan-ji Temple (Yasaka Pagoda)",
+    "home": "Home",
+    "visit": "Visit",
+    "transport": "Getting Here",
+    "history": "About",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "map": "Map",
+    "backToHome": "Back to Home"
+  },
+  "common": {
+    "changeLanguage": "Switch language",
+    "toggleTheme": "Toggle theme"
+  },
+  "nonprofitBanner": {
+    "text": "This is a non-profit, independent guide compiled by enthusiastic travellers, aiming to give you the most objective advice for visiting the Yasaka Pagoda — free of charge and affiliated with no organisation."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "text": "So that every visitor to Kyoto leaves Higashiyama without regret, we have gathered these scattered official details — only to give you the purest cultural and visiting experience."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "tokyoAttractions": "Kyoto Attractions",
+    "minato": "Higashiyama",
+    "odaibaPark": "Kiyomizu · Yasaka",
+    "current": "Yasaka Pagoda"
+  },
+  "stickyNav": {
+    "overview": "Overview",
+    "transport": "Getting Here",
+    "history": "History",
+    "guide": "Guide"
+  },
+  "hero": {
+    "title": "Hōkan-ji Temple (Yasaka Pagoda)",
+    "subtitle": "A wooden five-story pagoda standing in Kyoto's Higashiyama–Kiyomizu district, designated an Important Cultural Property of Japan. The present structure was rebuilt in 1440 by Shōgun Ashikaga Yoshinori and rises about 46 metres — the most recognisable ancient silhouette on the Higashiyama skyline. It survived the Ōnin War and countless fires, and still watches over the Ninenzaka, Sannenzaka lanes and Gion in vermilion and natural timber.",
+    "rating": "4.6 (5,877)",
+    "reviewCount": "5,877 reviews",
+    "hours": "Sat–Sun 10:00–15:00 (interior)",
+    "openMaps": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
+    "tags": ["Among Japan's oldest wooden pagodas", "Important Cultural Property", "Higashiyama · Kiyomizu"],
+    "routeCta": {
+      "label": "Plan Your Route",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Its History",
+      "href": "#history"
+    },
+    "quickFacts": [
+      { "icon": "🎟️", "label": "Free exterior viewing", "value": "No ticket needed" },
+      { "icon": "🕒", "label": "Sat & Sun", "value": "10:00–15:00" },
+      { "icon": "📍", "label": "Higashiyama · Kiyomizu", "value": "Yasakakamimachi" }
+    ],
+    "navCta": { "label": "📍 Get Directions", "href": "#transport" },
+    "photoCta": { "label": "📸 Best Photo Spots", "href": "#gallery" },
+    "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" }
+  },
+  "intro": {
+    "title": "Discover Hōkan-ji Temple (Yasaka Pagoda)",
+    "description": "Hōkan-ji is a Buddhist temple in Kyoto's Higashiyama–Kiyomizu district, best known for the five-story pagoda popularly called 'Yasaka-no-tō'. According to tradition the temple was founded in the Asuka period (592) by Prince Shōtoku; the tower we see today was rebuilt in 1440 (Eikyō 12) by Shōgun Ashikaga Yoshinori, making it nearly six centuries old. About 46 metres tall, it is among the oldest and tallest surviving wooden five-story pagodas in Japan and was designated an Important Cultural Property in 1960. More than a Higashiyama landmark, it overlooks the Ninenzaka and Sannenzaka lanes and Gion, and is a quintessential 'symbol of Kyoto' in countless photographs.",
+    "visitGuide": {
+      "title": "Visitor Guide",
+      "eyebrow": "Practical Planning",
+      "description": "The pagoda stands within an open townscape and can be viewed for free from the surrounding streets at any time; the interior opens only on Saturdays and Sundays, 10:00–15:00 (paid admission). Pair it with nearby Kiyomizu-dera, Yasaka Shrine and Gion on a single walking route.",
+      "items": [
+        "Exterior viewing is free and available anytime; for interior access plan a Saturday or Sunday between 10:00 and 15:00.",
+        "Best shots are from the intersection below the tower and the Ninenzaka/Sannenzaka lanes — fewest crowds at dawn and after the evening illumination.",
+        "The tower sits at the top of a slope; it is a 10-minute walk uphill from Kiyomizu-dera or from Yasaka Shrine, mostly on stone-paved lanes.",
+        "Cafés, restrooms and souvenir shops are dense nearby, so supplies are easy; afternoons in peak season (spring, autumn, year-end) get very crowded — arrive early."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "Important Cultural Property of Japan; present tower rebuilt in 1440, nearly 600 years old",
+        "A ~46 m wooden five-story pagoda — the most iconic ancient silhouette of Higashiyama",
+        "Survived the Ōnin War and repeated fires — a living witness of townscape and history",
+        "Evening illumination with the Ninenzaka/Sannenzaka lanterns makes a classic night view"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "Driver & Guide · How to Reach Hōkan-ji Temple (Yasaka Pagoda)",
+    "subtitle": "Whether you arrive by plane, train, public transit, car, taxi, bicycle or on foot, each mode is detailed below, with parking and a driver FAQ.",
+    "overviewTitle": "After arriving in Kyoto",
+    "overviewText": "Kyoto's main gateway is JR Kyoto Station, where the Shinkansen and private lines converge; Kansai (KIX) and Osaka Itami (ITM) airports both have direct links to the city. Once in town, the Yasaka Pagoda lies in the Higashiyama–Kiyomizu area; the easiest approach is to take a city bus to 'Kiyomizu-michi' or 'Gojō-zaka' and walk uphill, or walk in from Gion or Kiyomizu-dera.",
+    "overviewText2": "The pagoda itself stands in an open lane with no walls or gate, so it can be admired from outside for free at any time. Plan your transport, parking and walking route together to avoid on-site confusion and congestion.",
+    "arrivalTitle": "Remember before you go",
+    "arrivalItems": [
+      "The pagoda is in Yasakakamimachi above the Ninenzaka/Sannenzaka lanes; it is elevated, a 10–15 minute uphill walk from the bus stop or Gion.",
+      "There is no dedicated pagoda parking — use the paid lots around Kiyomizu and Gojō-zaka, then walk in.",
+      "Higashiyama streets are narrow and mostly one-way; congestion is severe in peak season and holidays — public transit or walking is strongly recommended."
+    ],
+    "modes": [
+      {
+        "label": "By Air (KIX / ITM)",
+        "icon": "✈️",
+        "title": "From Kansai or Itami Airport",
+        "description": "Best for overseas and long-distance domestic travellers; KIX has more flights, ITM is closer to the city.",
+        "details": [
+          "Kansai Intl (KIX): take the JR Haruka limited express to Kyoto Station (~75–80 min, ~¥3,000), or an airport limousine bus to central Kyoto.",
+          "Osaka Itami (ITM): airport limousine bus or Hankyu/Keihan connection to Kyoto (~50–60 min).",
+          "From Kyoto Station, transfer to a city bus or taxi to the Higashiyama–Kiyomizu area (see below)."
+        ],
+        "steps": [
+          { "n": "1", "t": "At the airport, follow signs for 'Kyoto' rail or limousine bus." },
+          { "n": "2", "t": "KIX: Haruka to Kyoto Station; ITM: limousine bus to central Kyoto." },
+          { "n": "3", "t": "At Kyoto Station take city bus 100/206 to 'Kiyomizu-michi' or 'Gojō-zaka', then walk uphill." }
+        ]
+      },
+      {
+        "label": "Train / Shinkansen",
+        "icon": "🚆",
+        "title": "JR Kyoto Station · Tōkaidō Shinkansen",
+        "description": "The most convenient rail hub, where the nationwide Shinkansen converges.",
+        "details": [
+          "From Tokyo, Tōkaidō Shinkansen (Nozomi) to Kyoto ~2 h 15 min; from Osaka, JR Kyoto Line ~30 min.",
+          "Inside Kyoto Station you can connect seamlessly to city buses, the subway and Keihan; head to the 'Kiyomizu-michi' bus stops.",
+          "With an ICOCA / Suica IC card, buses and subway can be used directly without queuing for tickets."
+        ],
+        "steps": [
+          { "n": "1", "t": "Exit at Kyoto Station central or Karasuma gate and find the city bus terminal (e.g. stops D1, D2)." },
+          { "n": "2", "t": "Take city bus 100 or 206, about 15–20 min to 'Kiyomizu-michi' or 'Gojō-zaka'." },
+          { "n": "3", "t": "Alight and follow signs uphill about 10 minutes to the Yasaka Pagoda." }
+        ]
+      },
+      {
+        "label": "Public Transit (Bus / Keihan)",
+        "icon": "🚇",
+        "title": "City Bus & Keihan Railway",
+        "description": "Most direct from Kyoto Station, Gion and Shijō-Kawaramachi.",
+        "details": [
+          "City buses 100 / 206: Kyoto Station ↔ Kiyomizu-michi / Gojō-zaka, ~¥230 one way, frequent.",
+          "Keihan Main Line: alight at 'Kiyomizu-Gojō' (~20 min walk uphill) or 'Gion-Shijō' then bus/walk.",
+          "Hankyu Kyoto Line: to 'Kyoto-Kawaramachi', then walk or bus to Higashiyama."
+        ],
+        "steps": [
+          { "n": "1", "t": "From Kyoto Station or Kawaramachi, take a city bus bound for 'Kiyomizu-dera'." },
+          { "n": "2", "t": "Alight at 'Kiyomizu-michi' or 'Gojō-zaka' bus stop." },
+          { "n": "3", "t": "Walk uphill along Gojō-zaka or the Ninenzaka lane about 10 minutes." }
+        ]
+      },
+      {
+        "label": "By Car (Parking)",
+        "icon": "🅿️",
+        "title": "Via Higashiyama · Nearby Parking",
+        "description": "Good when carrying luggage, travelling with children/elderly, or touring Kyoto by car; no dedicated pagoda lot, use nearby facilities.",
+        "details": [
+          "Set navigation to 'Yasaka Pagoda', 'Hōkan-ji' or the address '388 Kiyomizu-Yasakakamimachi, Higashiyama-ku, Kyoto 605-0862'.",
+          "Several paid lots (city and private) operate around Kiyomizu and Gojō-zaka; they fill up fast in peak season — arrive early or reserve.",
+          "Higashiyama streets are narrow and mostly one-way; long roadside parking near the pagoda is prohibited — use proper lots."
+        ],
+        "steps": [
+          { "n": "1", "t": "Set navigation to a 'Kiyomizu north parking' or 'Gojō-zaka paid parking'." },
+          { "n": "2", "t": "Follow signs into the lot, park, then walk to the pagoda." },
+          { "n": "3", "t": "Avoid the 10:00–16:00 peak to save time finding a space and walking." }
+        ]
+      },
+      {
+        "label": "Taxi / Rideshare",
+        "icon": "🚕",
+        "title": "Door-to-door",
+        "description": "Easiest with lots of luggage, children/elderly, or a late arrival.",
+        "details": [
+          "Taxi from Kyoto Station to the pagoda ~15 min, about ¥1,500–2,000.",
+          "From Gion only a few minutes, about ¥700–1,000; ask to drop off at the intersection before the slope.",
+          "Taxis can also be delayed in Higashiyama traffic — leave a buffer and book via a local app if needed."
+        ]
+      },
+      {
+        "label": "Cycling / Walking",
+        "icon": "🚲",
+        "title": "Along the Kamo River & Stone Lanes",
+        "description": "The most relaxed way to feel Kyoto's old-town atmosphere.",
+        "details": [
+          "Kyoto has public bike share (e.g. HelLo Cycle); riding along the Kamo River is mostly flat before the climb into Higashiyama.",
+          "Ninenzaka/Sannenzaka are stone slopes and steps — bikes cannot pass; lock up near the tower or the bus stop.",
+          "Downhill from Kiyomizu-dera, through Maruyama Park from Yasaka Shrine, or via Gion's Hanamikoji — all within 10–15 minutes on foot."
+        ]
+      },
+      {
+        "label": "On Foot (Townscape Stroll)",
+        "icon": "🚶",
+        "title": "Arrive by Street & Lane",
+        "description": "If you are already in Higashiyama, walking is the most natural approach.",
+        "details": [
+          "From Yasaka Shrine through Maruyama Park westward ~10 min; from Gion's Hanamikoji north ~10–15 min.",
+          "From Kiyomizu-dera down the Ninenzaka/Sannenzaka lanes, ~10–15 min to the intersection below the tower.",
+          "Stone paths are uneven — wear comfortable shoes and keep an eye on children and belongings."
+        ]
+      }
+    ],
+    "parking": {
+      "title": "Parking Overview (for drivers)",
+      "note": "The Yasaka Pagoda has no dedicated parking. Below are the nearest paid options; rates and availability vary by season and time — please check on-site signage.",
+      "colOption": "Option",
+      "colDistance": "Distance",
+      "colPrice": "Price",
+      "options": [
+        { "name": "Kiyomizu-area city/private lots", "distance": "~400–600 m", "price": "Hourly ~¥600–1,000, daily cap applies" },
+        { "name": "Gojō-zaka area paid lots", "distance": "~300–500 m", "price": "Private, ~¥500–900/hour" },
+        { "name": "Gion / Shijō-Kawaramachi lots", "distance": "~1.2–1.5 km", "price": "Mall & underground, varies" },
+        { "name": "Kyoto Station area lots", "distance": "~3 km", "price": "Large facilities, better for overnight/full day" },
+        { "name": "Drop-off (Gojō-zaka junction)", "distance": "~200 m", "price": "Short stop only, no parking space" }
+      ],
+      "disclaimer": "Streets around the pagoda are narrow and one-way; no long roadside parking. EV chargers are found mostly at Kyoto Station and some private lots — none at the tower itself. Rates and restrictions may change — check posted notices."
+    },
+    "driverFaqTitle": "Driver FAQ",
+    "driverFaq": [
+      { "q": "Is there parking near the Yasaka Pagoda?", "a": "The pagoda has no dedicated lot, but several city and private paid parking areas operate around Kiyomizu and Gojō-zaka, just a few minutes' walk away. They fill fast in peak season and holidays — arrive early or prefer public transit." },
+      { "q": "What is the nearest parking option?", "a": "Private lots around Gojō-zaka, about 300–500 m away, are the closest; Kiyomizu-area city lots (~400–600 m) have more spaces but get tight in peak season." },
+      { "q": "Is there roadside parking nearby?", "a": "Almost none. Higashiyama streets are narrow and mostly one-way, and long roadside parking near the pagoda is prohibited — use proper lots and public transit." },
+      { "q": "Is driving to the Yasaka Pagoda advisable?", "a": "Unless you must park, driving is not recommended. Higashiyama roads clog easily between 10:00 and 16:00; walking or transit is smoother. If driving, park nearby and walk up." },
+      { "q": "Do you recommend public transit?", "a": "Strongly. From Kyoto Station take city bus 100/206 to 'Kiyomizu-michi' or 'Gojō-zaka', then a ~10-minute uphill walk. Address: 388 Kiyomizu-Yasakakamimachi, Higashiyama-ku, Kyoto 605-0862, Japan." },
+      { "q": "What is the best route to get here?", "a": "Public transit is best: bus from Kyoto Station to Kiyomizu-michi/Gojō-zaka then walk, or a 10–15 minute walk from Gion/Yasaka Shrine. By car, park at a nearby lot then walk uphill. Address: 388 Kiyomizu-Yasakakamimachi, Higashiyama-ku, Kyoto 605-0862." }
+    ],
+    "localTipsTitle": "Practical Tips",
+    "localTips": [
+      "Early morning (before 9) and after the evening illumination have the fewest people — ideal for photos and a quiet moment with the tower.",
+      "The tower is lit at night and, together with the Ninenzaka/Sannenzaka lanterns, makes one of Kyoto's most atmospheric night views.",
+      "String the Yasaka Pagoda with Kiyomizu-dera, Yasaka Shrine and Gion into one walking route — a relaxed half-day."
+    ],
+    "mapsCta": "View Map & Route",
+    "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
+    "bestTime": {
+      "title": "Best Time to Arrive",
+      "text": "Although the tower can be admired from the streets at any time, mornings are best — you avoid crowds for clean front-on shots, can tour Kiyomizu-dera and Gion in the afternoon, and finish with the illuminated pagoda at night. That is the lowest-cost, most complete way to experience it."
+    }
+  },
+  "officialManagement": {
+    "title": "About the Pagoda",
+    "text": "Hōkan-ji (Yasaka Pagoda) is a Buddhist temple whose five-story pagoda is maintained by the temple. As an Important Cultural Property of Japan, the structure is also protected under the Law for the Protection of Cultural Properties; nighttime illumination and townscape management are coordinated by the City of Kyoto and the local community. As a publicly accessible historic landmark, it offers residents and visitors a place to appreciate the Higashiyama townscape and Japan's wooden architecture and history."
+  },
+  "knowledge": {
+    "title": "The History & Symbolism of the Yasaka Pagoda",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Origins: an Asuka-period legend",
+        "content": "According to tradition, Hōkan-ji was founded by Prince Shōtoku in the Asuka period (592), among the oldest temple origins in Kyoto. Though the earliest buildings no longer survive, the 'Yasaka Pagoda' has long been the faith centre of the Kiyomizu–Gion area, its history reaching back beyond the Heian period."
+      },
+      {
+        "id": "rebuild",
+        "title": "The present tower rebuilt in 1440",
+        "content": "The five-story pagoda we see today was rebuilt in 1440 (Eikyō 12) by Shōgun Ashikaga Yoshinori. Across nearly six centuries it has withstood earthquakes, fires and war, standing as one of the oldest surviving wooden five-story pagodas in Japan."
+      },
+      {
+        "id": "war",
+        "title": "Through the Ōnin War and countless fires",
+        "content": "Kyoto was nearly reduced to ashes by the Ōnin War (1467–1477) and other conflicts, with many Higashiyama temples destroyed. The Yasaka Pagoda miraculously survived again and again, becoming a rare wooden structure spanning the medieval to modern eras — a 'living witness' of townscape and history."
+      },
+      {
+        "id": "architecture",
+        "title": "The beauty of a wooden five-story pagoda",
+        "content": "Rising about 46 metres, the tower is built around a central pillar (shinbashira) running through five eaves, with traditional joinery and brackets (tokyō) projecting each tier. The eaves tilt upward gracefully; the proportions are balanced and upright, and the timber and vermilion textures each have their own charm under Kyoto's blue sky or night lights."
+      },
+      {
+        "id": "cultural",
+        "title": "An Important Cultural Property of Japan",
+        "content": "In 1960 the Yasaka Pagoda was designated an Important Cultural Property of Japan and is protected by national law. Its architectural value, historical continuity and role as the core of the Higashiyama landscape are all officially recognised."
+      },
+      {
+        "id": "symbol",
+        "title": "A green landmark of the Higashiyama townscape",
+        "content": "Looking up from the intersection below, or back from the Ninenzaka/Sannenzaka lanes, the Yasaka Pagoda always occupies the visual centre of the Higashiyama skyline. It is both a tourist symbol of Kyoto and a cultural link connecting Kiyomizu-dera, Yasaka Shrine and Gion."
+      }
+    ],
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "The present Yasaka Pagoda was rebuilt in 1440 — older than many of Japan's famous castles. It stands alone at an open street corner precisely because the temple's other buildings were repeatedly lost to fire, while this five-story pagoda was again and again preserved."
+    }
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "From the front of the tower and Ninenzaka frames to the illuminated night and the four seasons — the visual beauty of the Yasaka Pagoda.",
+    "photoAlt": "Hōkan-ji Temple (Yasaka Pagoda)",
+    "photoAlts": [
+      "Full view of the Yasaka Pagoda",
+      "Detail of the five-tiered eaves",
+      "Upward view from the intersection below",
+      "Pagoda framed with the Ninenzaka stone lane",
+      "Looking back from the Sannenzaka direction",
+      "Texture of vermilion and timber on the body",
+      "Overlooking the pagoda from Kiyomizu-dera",
+      "Structural detail on the south side",
+      "Close-up of eaves and brackets",
+      "The empty street corner at dawn",
+      "Silhouette of the pagoda at dusk",
+      "The Yasaka Pagoda after night illumination",
+      "Night view with the Ninenzaka lanterns",
+      "The pagoda and spring blossoms",
+      "Visitors posing below the tower",
+      "Distant view toward Maruyama Park",
+      "View from Gion's Hanamikoji lane",
+      "The full tower under a clear blue sky",
+      "Stone slope and the old pagoda",
+      "Higashiyama skyline in autumn colours",
+      "Quiet Kiyomizu lanes after snow",
+      "Light and shadow on the pagoda at night"
+    ],
+    "viewAll": "View location on Google Maps",
+    "showMore": "Show more photos",
+    "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Visitor feedback can be viewed on Google Maps (external link).",
+    "featuredTitle": "Visitor Quotes",
+    "featuredSubtitle": "A few short lines that capture the spirit of the Yasaka Pagoda.",
+    "moreReviews": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
+    "featured": [
+      {
+        "text": "I never expected such an ancient wooden tower at a Kyoto street corner — looking up took my breath away.",
+        "source": "Independent traveller · Shanghai"
+      },
+      {
+        "text": "The illuminated pagoda after dark, together with the Ninenzaka lanterns, was the most beautiful scene of the trip.",
+        "source": "Photographer · Tokyo"
+      },
+      {
+        "text": "A free streetscape landmark you can see just by strolling past — the kids were thrilled too.",
+        "source": "Family · Osaka"
+      }
+    ],
+    "items": [
+      {
+        "name": "Kenji",
+        "date": "April 2026",
+        "rating": 5,
+        "text": "Walked from Ninenzaka to the tower; the wooden five-story pagoda is taller than I imagined. Few people in the morning and clean front-on shots — strongly recommend going early."
+      },
+      {
+        "name": "Aiko",
+        "date": "March 2026",
+        "rating": 5,
+        "text": "Passed by after the evening illumination; the tower is especially gentle in the night. Easy to combine with Kiyomizu-dera and Gion on one route."
+      },
+      {
+        "name": "Hiroshi",
+        "date": "February 2026",
+        "rating": 4,
+        "text": "Great historical value as an Important Cultural Property; the architectural detail is worth studying. Crowded in the afternoon — weekdays are quieter."
+      },
+      {
+        "name": "Yuki",
+        "date": "January 2026",
+        "rating": 5,
+        "text": "Restrooms and food nearby are convenient, easy even with kids. About a ten-minute walk from Yasaka Shrine."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "How to Get Here",
+    "subtitle": "388 Kiyomizu-Yasakakamimachi, Higashiyama-ku, Kyoto 605-0862, Japan",
+    "openMaps": "Open in Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8"
+  },
+  "footer": {
+    "siteName": "Hōkan-ji Temple (Yasaka Pagoda)",
+    "rights": "© 2026 Hōkan-ji Temple (Yasaka Pagoda) — an independent non-profit visitor-information project. All rights reserved.",
+    "legalLinksTitle": "Privacy & Terms",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Official & Reference Resources",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
+    "officialLinksList": [
+      { "name": "Agency for Cultural Affairs: National Cultural Properties Database", "url": "https://kunishitei.bunka.go.jp/heritage/detail/102/1728" },
+      { "name": "Agency for Cultural Affairs: Cultural Heritage Database", "url": "https://online.bunka.go.jp/db/heritages/detail/122737" },
+      { "name": "Kyoto City: Hōkan-ji stone monument / historic record", "url": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/ishibumi/html/hi107.html" },
+      { "name": "Kyoto City: Cultural Properties Plan (PDF)", "url": "https://www.city.kyoto.lg.jp/tokei/cmsfiles/contents/0000116/116576/keikaku5.pdf" },
+      { "name": "Agency for Cultural Affairs: National Cultural Properties Database (entry)", "url": "https://kunishitei.bunka.go.jp/" }
+    ],
+    "mission": {
+      "title": "Our Mission",
+      "text": "So that every visitor to Kyoto leaves Higashiyama without regret, we have gathered these scattered official details — only to give you the purest cultural and visiting experience."
+    },
+    "disclaimer": "This website is an independent non-profit visitor-information project. We are not affiliated with any government agency or official organisation."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Information Collection",
+        "content": "We generally do not actively collect personally identifiable information. Any information you provide via a contact form or email will be kept strictly confidential."
+      },
+      {
+        "heading": "2. Use of Information",
+        "content": "Information we collect is used solely to provide, maintain and improve our services and to communicate with you. We will not sell or share your personal information with third parties for marketing purposes."
+      },
+      {
+        "heading": "3. Cookies & Tracking",
+        "content": "We use cookies and similar tracking technologies to record activity on the site and store certain information. You can instruct your browser to refuse all cookies or to alert you when a cookie is sent."
+      },
+      {
+        "heading": "4. Data Security",
+        "content": "Your data security is important to us. We take commercially acceptable measures to protect your personal data, although no method of transmission over the internet is 100% secure."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "content": "By accessing and using this website, you agree to be bound by these Terms of Service. If you do not agree with any part, you may not use the service."
+      },
+      {
+        "heading": "2. Use of Service",
+        "content": "This website is an independent non-profit visitor-information project. The information provided is for general informational purposes only. You agree to use the website responsibly and lawfully."
+      },
+      {
+        "heading": "3. Intellectual Property",
+        "content": "All content on this website, including text, images and logos, unless otherwise stated, is the property of the site owner. Unauthorised use, reproduction or distribution is strictly prohibited."
+      },
+      {
+        "heading": "4. Limitation of Liability",
+        "content": "We shall not be liable for any direct, indirect, incidental or consequential damages arising from the use of or inability to use this website or the information contained herein."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Manage your cookie preferences.",
+    "essential": {
+      "title": "Strictly Necessary Cookies",
+      "description": "Required for basic website functions.",
+      "badge": "Always active"
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us understand how visitors interact with the site."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "Used to track visitors across websites."
+    },
+    "save": "Save preferences",
+    "saved": "Preferences saved!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical information about the Yasaka Pagoda's facilities, history and visiting plan.",
+    "amenities": {
+      "title": "Nearby Facilities",
+      "items": [
+        { "icon": "🅿️", "label": "Parking", "value": "Paid lots around Kiyomizu / Gojō-zaka" },
+        { "icon": "🚻", "label": "Restrooms", "value": "Public toilets by the bus stop & Ninenzaka" },
+        { "icon": "🔌", "label": "Fuel / Charging", "value": "Chargers at Kyoto Station & some private lots" },
+        { "icon": "♿", "label": "Accessibility", "value": "Stone slopes — strollers passable but hard" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transport & Infrastructure",
+        "items": [
+          {
+            "q": "Is there parking? What are the rates?",
+            "a": "The Yasaka Pagoda has no dedicated lot, but several city and private paid parking areas operate around Kiyomizu and Gojō-zaka, just minutes away on foot. Rates are mostly hourly (~¥600–1,000/hour) with a daily cap; they fill fast in peak season and holidays — arrive early or prefer public transit."
+          },
+          {
+            "q": "Are wheelchairs or strollers allowed in the area?",
+            "a": "The pagoda stands in an open lane and can be viewed from outside with no gate barrier. However, Ninenzaka/Sannenzaka are stone slopes and steps; wheelchairs and strollers can pass but with effort. The bus stops and main junctions are relatively flat — allow extra time and assistance."
+          },
+          {
+            "q": "Are there restrooms or food/supplies inside?",
+            "a": "The area around the tower is an open townscape with no standalone restroom, but public toilets are available by the Kiyomizu-michi bus stop and along the Ninenzaka/Sannenzaka lanes, alongside many cafés, restaurants and convenience stores — supplies are very easy."
+          }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "History & Background",
+        "items": [
+          {
+            "q": "What is this pagoda for, and why is it in Kyoto?",
+            "a": "It is the five-story pagoda of Hōkan-ji temple, traditionally founded by Prince Shōtoku in 592, among the oldest temple origins in Kyoto. The present tower was rebuilt in 1440 as the architectural and religious symbol of the temple, long guarding the Kiyomizu–Gion area."
+          },
+          {
+            "q": "What is its special architectural value?",
+            "a": "About 46 metres tall, the tower is built around a central pillar with traditional joinery and brackets. It is among the oldest and tallest surviving wooden five-story pagodas in Japan, designated an Important Cultural Property in 1960, and survived the Ōnin War and repeated fires — of very high architectural and historical value."
+          }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & Tickets",
+        "items": [
+          {
+            "q": "Is a ticket required to visit?",
+            "a": "Viewing the pagoda from the surrounding streets is completely free and available anytime, with no walls or gate. The interior opens only on Saturdays and Sundays, 10:00–15:00, and requires a paid admission (amount per on-site notice)."
+          },
+          {
+            "q": "How long does a visit take?",
+            "a": "A typical visit is about 30 minutes to 1 hour: photos at the intersection below, a stroll along Ninenzaka and Sannenzaka, or a rest on a nearby bench. Allow half a day if also visiting Kiyomizu-dera, Yasaka Shrine and Gion."
+          },
+          {
+            "q": "Can I still go in bad weather?",
+            "a": "Yes — the pagoda is in an open townscape and can be viewed from outside in any weather. But stone paths are slippery when wet and summer sun is strong with little shade; wear non-slip shoes and bring water and sun protection. After rain or in winter it feels cooler — dress for wind and cold."
+          }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Nearby Area",
+        "items": [
+          {
+            "q": "After visiting, what other attractions are worth seeing nearby?",
+            "a": "From below the tower you can walk to the traditional Ninenzaka and Sannenzaka stone lanes, as well as Kiyomizu-dera, Yasaka Shrine, Maruyama Park, Gion's Hanamikoji and Kennin-ji. Further afield, the Fushimi Inari Taisha shrine and the Kyoto National Museum are reachable by bus or along the Kamo River."
+          }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Explore More of Higashiyama",
+    "attractionsTitle": "Nearby Attractions",
+    "toursTitle": "Recommended Experiences",
+    "attractions": [
+      { "name": "Kiyomizu-dera Temple", "url": "https://www.kiyomizudera.or.jp/" },
+      { "name": "Yasaka Shrine", "url": "https://www.yasaka-jinja.or.jp/" },
+      { "name": "Ninenzaka & Sannenzaka", "url": "https://www.city.kyoto.lg.jp/kanko/" },
+      { "name": "Gion · Hanamikoji", "url": "https://www.city.kyoto.lg.jp/kanko/" },
+      { "name": "Kennin-ji Temple", "url": "https://www.kenninji.jp/" }
+    ],
+    "tours": [
+      { "name": "Kyoto Official Travel Guide", "url": "https://kyoto.travel/en/" },
+      { "name": "Kyoto City Tourism Association · Higashiyama Walk", "url": "https://www.city.kyoto.lg.jp/kanko/" },
+      { "name": "Kyoto Bus Routes & Riding Guide", "url": "https://www.city.kyoto.lg.jp/kotsu/" }
+    ]
+  },
+  "scienceArt": {
+    "title": "Architecture & Symbolism: The Craft of a Wooden Five-story Pagoda",
+    "subtitle": "The Yasaka Pagoda is more than an old building — it is a public heritage that condenses Japanese carpentry, seismic wisdom and symbolic faith. Two dimensions help you read it.",
+    "scienceMuseum": {
+      "name": "Wooden Structure",
+      "role": "Joinery, brackets and the central pillar",
+      "highlight": "About 46 metres tall, the tower is built around a central pillar (shinbashira) running through all five tiers, with each eave projecting outward. Traditional carpentry uses not a single nail — everything interlocks by joinery and brackets (tokyō). The flexible connections between tiers let the tower sway slightly in an earthquake and dissipate shock, a crystallisation of Japan's millennia-old seismic wisdom.",
+      "points": [
+        "Shinbashira: the core wooden column through all five tiers, stabilising the centre and symbolising the axis of the Dharma.",
+        "Brackets & overhangs: outward-projecting wooden members that both bear load and absorb shock.",
+        "Five eaves: balanced proportions with upturned corners form the iconic upright silhouette."
+      ],
+      "ctaLabel": "View Cultural Affairs database ↗",
+      "ctaUrl": "https://kunishitei.bunka.go.jp/heritage/detail/102/1728"
+    },
+    "artMuseum": {
+      "name": "Historical Status",
+      "role": "A living witness across the medieval era",
+      "highlight": "The present tower was rebuilt in 1440 (Ashikaga Yoshinori's era), older than many of Japan's famous castles. It survived the Ōnin War and repeated fires alone, and in 1960 was designated an Important Cultural Property of Japan — a symbol of the Higashiyama landscape and Kyoto's historical continuity.",
+      "points": [
+        "Rebuilt 1440: a wooden example uninterrupted for nearly six centuries.",
+        "Important Cultural Property: protected nationally under the Law for the Protection of Cultural Properties.",
+        "Townscape symbol: a cultural link connecting Kiyomizu-dera, Yasaka Shrine and Gion."
+      ],
+      "ctaLabel": "View Kyoto City historic record ↗",
+      "ctaUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/ishibumi/html/hi107.html"
+    }
+  },
+  "outdoorMuseum": {
+    "title": "Photo & Spotting Guide: Best Frames of the Yasaka Pagoda",
+    "subtitle": "As Kyoto's most recognisable old pagoda, a few structured viewpoints and timings will greatly improve the usefulness and beauty of your photos.",
+    "items": [
+      {
+        "id": "front",
+        "icon": "📸",
+        "name": "Classic Front View",
+        "location": "Intersection below the tower",
+        "background": "At the intersection directly in front of the tower, looking level, is the safest angle to recreate the 'symbol of Kyoto'. With blue sky or Higashiyama as backdrop you get a clean, symmetric full shot.",
+        "points": [
+          "Place the pagoda at the centre, using the open lane as negative space to highlight the wooden body.",
+          "Crouch low and shoot upward to lengthen the figure and emphasise the solemnity of the five eaves."
+        ],
+        "badge": { "value": "All day", "label": "Most versatile" }
+      },
+      {
+        "id": "slope",
+        "icon": "🏘️",
+        "name": "Ninenzaka & Sannenzaka Frame",
+        "location": "Looking back up the stone slope",
+        "background": "Walking up Ninenzaka/Sannenzaka and looking back, you can capture the pagoda together with the stone lane and traditional machiya houses. Vermilion tower, grey tiles and wooden lattices make a rich Kyoto flavour.",
+        "points": [
+          "Use the pagoda as the distant subject, with the foreground stone lane and lanterns leading the eye.",
+          "A telephoto compression brings the tower and old street visually 'closer'."
+        ],
+        "badge": { "value": "Daytime", "label": "Best flavour" }
+      },
+      {
+        "id": "night",
+        "icon": "🌇",
+        "name": "Dusk & Evening Illumination",
+        "location": "Street corner facing the tower",
+        "background": "After sunset the tower is lit and mirrors the Ninenzaka lanterns. The blue-hour balance of sky and lights is the most atmospheric window.",
+        "points": [
+          "Shoot in the blue hour (20–30 min after sunset) when sky and lights are most balanced.",
+          "A tripod with long exposure captures the wet sheen of the stone path."
+        ],
+        "badge": { "value": "Night", "label": "Most atmospheric" }
+      },
+      {
+        "id": "kiyomizu",
+        "icon": "⛩️",
+        "name": "Overlook from Kiyomizu-dera",
+        "location": "Kiyomizu stage / Kodai-ji area",
+        "background": "From Kiyomizu-dera or nearby heights looking back over Higashiyama, the Yasaka Pagoda fits into a broader city skyline — great for a closing panorama.",
+        "points": [
+          "Use distant hills and Kyoto roof tiles as a base to highlight the tower's height and isolation.",
+          "Morning mist gives the best layers; a small aperture captures the full panorama."
+        ],
+        "badge": { "value": "Morning", "label": "Best layers" }
+      }
+    ]
+  },
+  "education": {
+    "title": "Why is there a Yasaka Pagoda in Kyoto? (Cultural Significance)",
+    "subtitle": "A pagoda standing at a street corner — why has it crossed a millennium to become Kyoto's visual symbol? Behind it lie multiple narratives of religion, townscape and urban memory.",
+    "points": [
+      {
+        "title": "Origins of faith & townscape",
+        "text": "Hōkan-ji is traditionally said to have been founded by Prince Shōtoku in 592, an early centre of faith in the Kiyomizu–Gion area. As the temple's symbol, the pagoda long guarded this transitional zone between mountain and city."
+      },
+      {
+        "title": "Survivor of war",
+        "text": "Kyoto endured the Ōnin War and other conflicts that destroyed many Higashiyama buildings, yet the Yasaka Pagoda survived again and again. It thus became one of the few wooden structures spanning the medieval to modern eras, carrying the city's historical continuity."
+      },
+      {
+        "title": "A cultural link across time",
+        "text": "The same tower connects Hōkan-ji's faith, the old-street fabric of Ninenzaka/Sannenzaka, and Kiyomizu-dera, Yasaka Shrine and Gion. It reminds us that great urban landmarks are often the product of history and reality living together."
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who Will Resonate Here? (Audience Guide)",
+    "subtitle": "Every kind of visitor can find their best 'way in'.",
+    "items": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families",
+        "resonance": "A free, open, safe street-corner landmark where kids can run, take photos and meet this thousand-year-old wooden tower up close.",
+        "tip": "Pair with Ninenzaka/Sannenzaka sweets and shops — explore the old lane first, then look up at the tower for an easier pace."
+      },
+      {
+        "icon": "📷",
+        "group": "Photographers & Couples",
+        "resonance": "The illuminated pagoda at dawn and after dark is Kyoto's most romantic scene, with a very high hit rate.",
+        "tip": "Occupy the intersection below 30 minutes before dawn; shoot in the blue hour to capture both lights and sky."
+      },
+      {
+        "icon": "🏯",
+        "group": "History & Architecture Lovers",
+        "resonance": "The present tower rebuilt in 1440 and ~46 m tall is an outstanding example of Japan's wooden five-story pagodas — details worth studying.",
+        "tip": "String the Yasaka Pagoda, Kiyomizu-dera and Kennin-ji into a 'Higashiyama wooden-architecture pilgrimage' to feel the evolution of Japanese building."
+      },
+      {
+        "icon": "🗺️",
+        "group": "First-time Visitors to Japan",
+        "resonance": "Without travelling to Nara or Osaka, you can meet a千年-old pagoda at a Kyoto street corner; close to Kiyomizu-dera and Gion, it is the best starting point to know the old city.",
+        "tip": "From Kyoto Station take a bus to Kiyomizu-michi, stroll down Ninenzaka, and the tower will meet you around the corner."
+      }
+    ]
+  }
+}
