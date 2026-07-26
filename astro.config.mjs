@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://yasakapagodakyoto.com',
   output: 'static',
   i18n: {
-    defaultLocale: 'zh',
+    defaultLocale: 'ja',
     locales: ['zh', 'en', 'ja', 'ko'],
     routing: {
       prefixDefaultLocale: true,
