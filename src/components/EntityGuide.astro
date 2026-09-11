@@ -1,0 +1,112 @@
+---
+import { entityConfig } from '../config/entity';
+
+interface Props {
+  messages: Record<string, any>;
+}
+
+const { messages } = Astro.props;
+const e = messages.entity;
+const entityName = e?.officialName ?? entityConfig.fullName;
+---
+
+<section id="location" class="section section-alt" aria-labelledby="entity-location-heading">
+  <div class="container">
+    <p class="entity-equivalence" set:html={e.introStatement} />
+
+    <h2 id="entity-about-heading" class="section-heading">{e.aboutTitle}</h2>
+    <p class="mb-8">{e.aboutText}</p>
+
+    <h2 id="entity-location-heading" class="section-heading">{e.locationTitle}</h2>
+    <p>{e.locationText}</p>
+
+    <div class="hierarchy" aria-label={e.hierarchyLabel}>
+      <span class="hierarchy-item">{entityName}</span>
+      <span class="hierarchy-sep" aria-hidden="true">→</span>
+      <span class="hierarchy-item">{entityConfig.city}</span>
+      <span class="hierarchy-sep" aria-hidden="true">→</span>
+      <span class="hierarchy-item">{entityConfig.province}</span>
+      <span class="hierarchy-sep" aria-hidden="true">→</span>
+      <span class="hierarchy-item">{entityConfig.country}</span>
+    </div>
+
+    <h2 id="entity-nearby-heading" class="section-heading">{e.nearbyTitle}</h2>
+    <p set:html={e.nearbyText} />
+    <ul class="landmark-list">
+      {e.nearbyLandmarks.map((landmark: { name: string; url: string }) => (
+        <li>
+          <a href={landmark.url} target="_blank" rel="noopener noreferrer">
+            {landmark.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <h2 id="entity-history-heading" class="section-heading">{e.historyTitle}</h2>
+    <p>{e.historyText}</p>
+  </div>
+</section>
+
+<style>
+  .entity-equivalence {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(199, 107, 42, 0.08);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .hierarchy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.25rem 0 2rem;
+    padding: 0.875rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .hierarchy-item {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .hierarchy-sep {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .landmark-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+  .landmark-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .landmark-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  .landmark-list a {
+    display: block;
+    padding: 0.875rem 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .landmark-list a:hover {
+    color: var(--accent);
+  }
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+</style>

@@ -5,6 +5,7 @@ import NoticeBanner from '../components/NoticeBanner.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl, buildAlternates, htmlLangAttr, getI18n } from '../i18n/ui';
 import { ogLocale } from '../config';
+import { entityConfig } from '../config/entity';
 
 interface Props {
   title: string;
@@ -19,64 +20,132 @@ const alts = buildAlternates(path);
 const canonical = alts[lang] ?? alts.zh;
 const { messages } = getI18n(Astro.url);
 
+const entityName = messages.entity?.officialName ?? entityConfig.fullName;
+const entityShortName = messages.entity?.shortName ?? entityConfig.shortName;
+const entityCity = entityConfig.city;
+const heroImageAbsolute = entityConfig.baseUrl + entityConfig.heroImage;
+const ogLocaleValue = ogLocale[lang] ?? lang;
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: messages.meta.title,
+  '@id': `${entityConfig.baseUrl}/#attraction`,
+  name: entityName,
+  alternateName: Array.from(
+    new Set(
+      [
+        ...entityConfig.alternateNames,
+        entityConfig.fullName,
+        entityShortName,
+        `${entityCity} ${entityShortName}`,
+        messages.entity?.officialNameRoman,
+        // Native-script forms: help search engines match the entity for non-Latin queries
+        '法観寺',
+        '八坂の塔',
+        '法观寺',
+        '八坂之塔',
+        '法觀寺',
+        '야사카 탑',
+      ].filter(Boolean)
+    )
+  ),
   description: messages.meta.description,
   url: canonical,
-  image: 'https://yasakapagodakyoto.com/gallery/yasakapagodakyoto-1.jpg',
+  image: entityConfig.galleryImages.map((src) => entityConfig.baseUrl + src),
+  isAccessibleForFree: false,
+  publicAccess: true,
+  telephone: entityConfig.telephone,
+  priceRange: '¥500 (interior admission)',
+  currenciesAccepted: 'JPY',
+  paymentAccepted: 'Cash only',
+  touristType: [
+    'Cultural travellers',
+    'Temple and history visitors',
+    'Photographers',
+    'Families',
+  ],
+  availableLanguage: ['ja', 'en', 'zh', 'ko'],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '388 Kiyomizu-Yasakakamimachi, Higashiyama-ku',
-    addressLocality: 'Kyoto',
-    addressRegion: 'Kyoto',
-    postalCode: '605-0862',
-    addressCountry: 'JP',
+    streetAddress: entityConfig.streetAddress,
+    addressLocality: entityConfig.city,
+    addressRegion: entityConfig.province,
+    postalCode: entityConfig.postalCode,
+    addressCountry: entityConfig.countryCode,
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 34.9986,
-    longitude: 135.7792,
+    latitude: entityConfig.latitude,
+    longitude: entityConfig.longitude,
   },
+  hasMap: entityConfig.mapsUrl,
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday', 'Sunday'],
-      opens: '10:00',
-      closes: '15:00',
+      dayOfWeek: entityConfig.openingDays,
+      opens: entityConfig.openingHours,
+      closes: entityConfig.closingHours,
+      description:
+        'Interior (second floor) access only. Opening days are irregular — always check the notice at the entrance.',
     },
   ],
-  isAccessibleForFree: false,
-  offers: [
+  makesOffer: [
     {
       '@type': 'Offer',
-      price: '500',
-      priceCurrency: 'JPY',
-      url: canonical,
-      description: messages.meta.description,
+      name: 'Interior admission (second floor)',
+      category: 'Admission ticket',
+      price: entityConfig.price,
+      priceCurrency: entityConfig.priceCurrency,
+      acceptedPaymentMethod: { '@type': 'PaymentMethod', name: 'Cash' },
+      availability: 'https://schema.org/InStock',
     },
+  ],
+  mainEntityOfPage: canonical,
+  isPartOf: { '@type': 'WebSite', '@id': `${entityConfig.baseUrl}/#website` },
+  containedInPlace: [
+    { '@type': 'AdministrativeArea', name: 'Higashiyama Ward, Kyoto' },
+    { '@type': 'AdministrativeArea', name: 'Kyoto, Japan' },
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.6',
-    reviewCount: '5877',
+    ratingValue: entityConfig.ratingValue,
+    reviewCount: entityConfig.reviewCount,
   },
-  sameAs: ['https://maps.app.goo.gl/h1TRULeMbYZtv1od8'],
+  sameAs: [
+    entityConfig.mapsUrl,
+    entityConfig.govtTourismUrl,
+    entityConfig.culturalAffairsUrl,
+    entityConfig.kyotoCityUrl,
+  ],
 };
-  const breadcrumbLd = (() => {
-    const bc = messages.breadcrumb;
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: bc.home, item: `https://yasakapagodakyoto.com/${lang}` },
-        { '@type': 'ListItem', position: 2, name: bc.kyoto, item: `https://yasakapagodakyoto.com/${lang}#overview` },
-        { '@type': 'ListItem', position: 3, name: bc.higashiyama, item: `https://yasakapagodakyoto.com/${lang}#transport` },
-        { '@type': 'ListItem', position: 4, name: bc.current, item: canonical },
-      ],
-    };
-  })();
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${entityConfig.baseUrl}/#website`,
+  name: messages.footer.siteName,
+  url: entityConfig.baseUrl,
+  inLanguage: ogLocaleValue,
+  publisher: {
+    '@type': 'Organization',
+    name: messages.footer.siteName,
+    url: entityConfig.baseUrl,
+  },
+};
+
+const breadcrumbLd = (() => {
+  const bc = messages.breadcrumb;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: bc.home, item: `https://yasakapagodakyoto.com/${lang}` },
+      { '@type': 'ListItem', position: 2, name: bc.kyoto, item: `https://yasakapagodakyoto.com/${lang}#overview` },
+      { '@type': 'ListItem', position: 3, name: bc.higashiyama, item: `https://yasakapagodakyoto.com/${lang}#transport` },
+      { '@type': 'ListItem', position: 4, name: bc.current, item: canonical },
+    ],
+  };
+})();
 ---
 
 <!doctype html>
@@ -86,8 +155,9 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="zh" href={alts.zh} />
+    <link rel="alternate" hreflang="zh-Hans" href={alts.zh} />
     <link rel="alternate" hreflang="en" href={alts.en} />
     <link rel="alternate" hreflang="ja" href={alts.ja} />
     <link rel="alternate" hreflang="ko" href={alts.ko} />
@@ -97,8 +167,25 @@ const jsonLd = {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content={ogLocale[lang] ?? lang} />
+    <meta property="og:site_name" content={messages.footer.siteName} />
+    <meta property="og:locale" content={ogLocaleValue} />
+    <meta property="og:image" content={heroImageAbsolute} />
+    <meta property="og:image:alt" content={`${entityName} in ${entityCity}`} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroImageAbsolute} />
+    <meta name="twitter:image:alt" content={`${entityName} in ${entityCity}`} />
+
+    <meta name="theme-color" content={entityConfig.themeColor} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content={messages.footer.siteName} />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
 
     <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
@@ -113,6 +200,7 @@ const jsonLd = {
     </script>
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd)}></script>
     <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>
 
     <script is:inline>
@@ -124,6 +212,14 @@ const jsonLd = {
           }
         } catch (e) {}
       })();
+    </script>
+
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+      }
     </script>
 
     <slot name="head" />

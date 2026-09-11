@@ -42,7 +42,9 @@ export function buildAlternates(path = ''): Record<string, string> {
     en: mk('en'),
     ja: mk('ja'),
     ko: mk('ko'),
-    xDefault: mk('ja'),
+    // x-default serves users whose language does not match any locale above.
+    // The site's search demand is dominated by English-language travel queries.
+    xDefault: mk('en'),
   };
 }
 

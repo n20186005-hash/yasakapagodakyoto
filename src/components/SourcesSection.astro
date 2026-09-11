@@ -1,0 +1,85 @@
+---
+import { getI18n } from '../i18n/ui';
+
+const { messages } = getI18n(Astro.url);
+const e = messages.entity;
+const f = messages.footer;
+const links = f.officialLinksList;
+---
+
+<section id="sources" class="section-padding" style="background: var(--bg-tertiary); border-top: 1px solid var(--border-color);">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-3 text-center" style="color: var(--text-primary);">{e.sourcesTitle}</h2>
+    <p class="text-center mb-8" style="color: var(--text-secondary);">{e.sourcesSubtitle}</p>
+
+    <ul class="source-list">
+      {links.map((link: { name: string; url: string }) => (
+        <li>
+          <a href={link.url} target="_blank" rel="noopener noreferrer">
+            <span class="source-name">{link.name}</span>
+            <span class="source-host">{new URL(link.url).hostname}</span>
+          </a>
+        </li>
+      ))}
+      <li>
+        <a href={f.mapsUrl} target="_blank" rel="noopener noreferrer">
+          <span class="source-name">Google Maps — {f.siteName}</span>
+          <span class="source-host">maps.app.goo.gl</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="copyright-box" aria-labelledby="copyright-heading">
+      <h3 id="copyright-heading" class="font-semibold mb-2" style="color: var(--text-primary);">{e.copyrightTitle}</h3>
+      <p style="color: var(--text-secondary);">{e.copyrightText}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .source-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.75rem;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+  .source-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .source-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+  .source-list a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.875rem 1rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  .source-name {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  .source-list a:hover .source-name {
+    color: var(--accent);
+  }
+  .source-host {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .copyright-box {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(199, 107, 42, 0.06);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+  }
+</style>

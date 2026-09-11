@@ -3,11 +3,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionNav from '../../components/SectionNav.astro';
 import Hero from '../../components/Hero.astro';
+import VisitorEssentials from '../../components/VisitorEssentials.astro';
 import QuickFactsDashboard from '../../components/QuickFactsDashboard.astro';
 import ComplianceGuide from '../../components/ComplianceGuide.astro';
 import HigashiyamaRoute from '../../components/HigashiyamaRoute.astro';
 import Intro from '../../components/Intro.astro';
 import Transport from '../../components/Transport.astro';
+import Amenities from '../../components/Amenities.astro';
+import Weather from '../../components/Weather.astro';
 import InfoSection from '../../components/InfoSection.astro';
 import ScienceArt from '../../components/ScienceArt.astro';
 import OutdoorMuseum from '../../components/OutdoorMuseum.astro';
@@ -18,6 +21,9 @@ import Reviews from '../../components/Reviews.astro';
 import MapEmbed from '../../components/MapEmbed.astro';
 import DeepDive from '../../components/DeepDive.astro';
 import FAQ from '../../components/FAQ.astro';
+import EntityGuide from '../../components/EntityGuide.astro';
+import Legends from '../../components/Legends.astro';
+import SourcesSection from '../../components/SourcesSection.astro';
 import { getI18n, languagesList } from '../../i18n/ui';
 
 export function getStaticPaths() {
@@ -26,15 +32,24 @@ export function getStaticPaths() {
 
 const { messages } = getI18n(Astro.url);
 const faq = messages.faq;
+const entityFaq = messages.entity?.faq ?? [];
 const faqLd = (() => {
   const categories = faq?.categories ?? [];
-  const mainEntity = categories.flatMap((cat) =>
-    (cat.items ?? []).map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
-    })),
-  );
+  const mainEntity = categories
+    .flatMap((cat) =>
+      (cat.items ?? []).map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    )
+    .concat(
+      entityFaq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    );
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -48,11 +63,16 @@ const faqLd = (() => {
   <Breadcrumbs />
   <SectionNav />
   <Hero />
+  <VisitorEssentials />
   <QuickFactsDashboard />
+  <Weather />
   <ComplianceGuide />
   <HigashiyamaRoute />
   <Intro />
+  <EntityGuide messages={messages} />
+  <Legends />
   <Transport />
+  <Amenities />
   <FeaturedQuotes />
   <ScienceArt />
   <OutdoorMuseum />
@@ -63,4 +83,5 @@ const faqLd = (() => {
   <MapEmbed />
   <DeepDive />
   <FAQ />
+  <SourcesSection />
 </BaseLayout>

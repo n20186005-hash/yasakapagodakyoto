@@ -1,0 +1,55 @@
+{
+  "name": "Hōkan-ji Temple (Yasaka Pagoda) — Kyoto Visitor Guide",
+  "short_name": "Yasaka Pagoda",
+  "description": "Independent visitor guide to Hōkan-ji Temple (Yasaka Pagoda) in Higashiyama, Kyoto: history, location, map, photo spots and travel tips.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf8f4",
+  "theme_color": "#0f2015",
+  "lang": "ja",
+  "dir": "ltr",
+  "categories": ["travel", "education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Location & Map",
+      "short_name": "Map",
+      "description": "Open the location guide with the official Google Map",
+      "url": "/ja/#location",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

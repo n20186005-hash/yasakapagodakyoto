@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Hōkan-ji Temple (Yasaka Pagoda) | Higashiyama, Kyoto, Japan",
-    "description": "The complete guide to Hōkan-ji Temple's Yasaka Pagoda: this Important Cultural Property five-story pagoda in Kyoto's Higashiyama district — its history, architectural beauty, how to get there, visitor reviews and the best photo spots."
+    "title": "Yasaka Pagoda Tickets & Hours | Hōkan-ji Temple, Kyoto",
+    "description": "Visiting Yasaka Pagoda (Hōkan-ji Temple) in Kyoto? Check 2026 interior tickets (¥500), opening hours, entry rules and the best Ninenzaka photo spots."
   },
   "header": {
     "siteName": "Hōkan-ji Temple (Yasaka Pagoda)",
@@ -33,18 +33,22 @@
     "current": "Yasaka Pagoda"
   },
   "stickyNav": {
+    "tickets": "Tickets & Hours",
     "facts": "Quick Facts",
     "etiquette": "Do/Don't",
     "route": "3-Hour Route",
     "transport": "Getting Here",
     "visit": "Visit Rules",
+    "weather": "Weather",
+    "amenities": "Facilities",
+    "legends": "Legends",
     "faq": "FAQ"
   },
   "hero": {
-    "title": "Hōkan-ji Temple (Yasaka Pagoda)",
+    "title": "Hōkan-ji Temple (Yasaka Pagoda) in Kyoto",
     "subtitle": "A five-story wooden pagoda silhouette in Kyoto’s Higashiyama–Kiyomizu townscape: always visible from the streets, and sometimes open for interior visits on weekends (subject to on-site notice).",
-    "rating": "4.6 (5,877)",
-    "reviewCount": "5,877 reviews",
+    "rating": "4.6 (6,056)",
+    "reviewCount": "6,056 reviews",
     "hours": "Sat–Sun 10:00–15:00 (interior)",
     "openMaps": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
@@ -62,8 +66,9 @@
       { "icon": "📏", "label": "Height", "value": "~46 m" },
       { "icon": "🎟️", "label": "Interior fee", "value": "¥500" }
     ],
+    "ticketsCta": { "label": "🎟️ Tickets & Hours", "href": "#tickets" },
     "navCta": { "label": "📍 Get Directions", "href": "#transport" },
-    "photoCta": { "label": "📸 Best Photo Spots", "href": "#gallery" },
+    "photoCta": { "label": "📸 Best Photo Spots", "href": "#photo-spots" },
     "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" }
   },
   "quickFactsDashboard": {
@@ -261,7 +266,7 @@
         "title": "Along the Kamo River & Stone Lanes",
         "description": "The most relaxed way to feel Kyoto's old-town atmosphere.",
         "details": [
-          "Kyoto has public bike share (e.g. HelLo Cycle); riding along the Kamo River is mostly flat before the climb into Higashiyama.",
+          "Kyoto has public bike share; riding along the Kamo River is mostly flat before the climb into Higashiyama.",
           "Ninenzaka/Sannenzaka are stone slopes and steps — bikes cannot pass; lock up near the tower or the bus stop.",
           "Downhill from Kiyomizu-dera, through Maruyama Park from Yasaka Shrine, or via Gion's Hanamikoji — all within 10–15 minutes on foot."
         ]
@@ -626,8 +631,16 @@
         "title": "Planning & Tickets",
         "items": [
           {
-            "q": "Is a ticket required to visit?",
-            "a": "Viewing the pagoda from the surrounding streets is completely free and available anytime, with no walls or gate. The interior opens only on Saturdays and Sundays, 10:00–15:00, and requires a paid admission (amount per on-site notice)."
+            "q": "Is a ticket required to visit Yasaka Pagoda?",
+            "a": "No — viewing the pagoda from the surrounding streets is completely free and possible at any time, as there is no gate or wall. A ticket is needed only to enter the pagoda's second floor."
+          },
+          {
+            "q": "How much is the ticket for Yasaka Pagoda (Hōkan-ji Temple)?",
+            "a": "The interior admission fee is ¥500 for adults, payable in cash only at the entrance. The second floor usually opens on Saturdays and Sundays from 10:00 to 15:00, but opening days are irregular, so check the notice on site."
+          },
+          {
+            "q": "Can you go inside Yasaka Pagoda?",
+            "a": "Yes — when the pagoda is open, visitors can climb to the second floor. Only the second floor is open to the public, and the interior may close without notice for weather or temple duties, so confirm at the entrance before planning your day around it."
           },
           {
             "q": "How long does a visit take?",
@@ -696,8 +709,34 @@
       "ctaUrl": "https://www2.city.kyoto.lg.jp/somu/rekishi/fm/ishibumi/html/hi107.html"
     }
   },
+  "visitorEssentials": {
+    "eyebrow": "Visitor essentials",
+    "title": "Yasaka Pagoda Tickets, Opening Hours & Entry Rules",
+    "answer": "Yasaka Pagoda (Hōkan-ji Temple) has no gate or wall, and viewing it from the surrounding lanes is free at any time of day. A ticket (¥500 for adults, cash only) is required only to enter the pagoda's second floor, which usually opens on Saturdays and Sundays from 10:00 to 15:00. Opening days are irregular, so check the notice at the entrance before planning around them.",
+    "updatedLabel": "Information last updated",
+    "cards": [
+      { "icon": "🎟️", "label": "Interior ticket", "value": "¥500", "note": "Adults. Viewing the pagoda from the surrounding lanes is free." },
+      { "icon": "🕒", "label": "Opening hours", "value": "10:00–15:00", "note": "Usually Saturdays and Sundays only." },
+      { "icon": "💴", "label": "Payment", "value": "Cash only", "note": "Bring Japanese yen — cards and IC cards are not accepted on site." },
+      { "icon": "📅", "label": "Opening days", "value": "Irregular", "note": "The interior may close without notice for weather or temple duties." }
+    ],
+    "rulesTitle": "Before you go",
+    "rules": [
+      "Interior access is limited to the second floor, and only while the pagoda is open.",
+      "Opening days can change without notice — follow the notice board and staff guidance.",
+      "Exterior viewing is free at any time, but the lanes are residential: keep voices low and don't block the street for long.",
+      "Stone lanes and steps such as Ninenzaka are slippery when wet — wear shoes with good grip."
+    ],
+    "linksTitle": "Related guides",
+    "links": [
+      { "label": "Interior visit rules & etiquette", "href": "#visit" },
+      { "label": "Best photo spots & Ninenzaka guide", "href": "#photo-spots" },
+      { "label": "Getting here: bus, train, taxi & parking", "href": "#transport" },
+      { "label": "Yasaka Pagoda FAQ (tickets, hours, interior)", "href": "#faq" }
+    ]
+  },
   "outdoorMuseum": {
-    "title": "Photo & Spotting Guide: Best Frames of the Yasaka Pagoda",
+    "title": "Best Photo Spots: Yasaka Pagoda & Ninenzaka Photography Guide",
     "subtitle": "As Kyoto's most recognisable old pagoda, a few structured viewpoints and timings will greatly improve the usefulness and beauty of your photos.",
     "items": [
       {
@@ -796,6 +835,156 @@
         "resonance": "Without travelling to Nara or Osaka, you can meet a千年-old pagoda at a Kyoto street corner; close to Kiyomizu-dera and Gion, it is the best starting point to know the old city.",
         "tip": "From Kyoto Station take a bus to Kiyomizu-michi, stroll down Ninenzaka, and the tower will meet you around the corner."
       }
+    ]
+  },
+  "legends": {
+    "title": "Legends, Lore & Stories",
+    "subtitle": "Traditions and historical anecdotes surrounding Hōkan-ji Temple (Yasaka Pagoda), with fact and legend clearly distinguished.",
+    "disclaimer": "Some passages below are temple traditions or folk legends; historical sources offer varying accounts.",
+    "items": [
+      { "icon": "👶", "period": "Asuka period, 592", "title": "Prince Shōtoku and the founding legend", "text": "Tradition traces Hōkan-ji's origin to Prince Shōtoku, who is said to have enshrined a Nyoirin Kannon image after a dream revelation and built the hall. The principal image has long been kept as a hidden Buddha." },
+      { "icon": "🛕", "period": "Muromachi period, 1440", "title": "Ashikaga Yoshinori and the rebuilt pagoda", "text": "Records indicate the present five-story pagoda was rebuilt in 1440 during the Muromachi period, shaped by the ruling authority of the day as the tower symbolising Higashiyama." },
+      { "icon": "🔥", "period": "Ōnin War, 1467–1477", "title": "The tower that survived the flames", "text": "Much of Kyoto burned during the Ōnin War, yet tradition holds that Yasaka Pagoda escaped destruction. It has since endured repeated fires and earthquakes." },
+      { "icon": "🗺️", "period": "Origin of the name", "title": "Why is it called 'Yasaka'?", "text": "One folk account says the name 'Yasaka' comes from the eight slopes once found here; another links it to the old district name 'Yasaka-gō'. Theories differ." },
+      { "icon": "🙏", "period": "Edo period", "title": "The 'watchtower' of the neighbourhood", "text": "From the Edo period onward the pagoda became part of daily life for the people of Kiyomizu and Gion, cherished as a centre of local devotion and scenery." },
+      { "icon": "📜", "period": "1960", "title": "Designated an Important Cultural Property", "text": "In 1960 the five-story pagoda of Hōkan-ji was designated an Important Cultural Property of Japan, and it is protected today as a representative cultural asset of Higashiyama." }
+    ]
+  },
+  "weather": {
+    "title": "Weather & Going-Out Tips",
+    "subtitle": "Current conditions and a 7-day outlook around Yasaka Pagoda to help you plan your visit.",
+    "feelsLike": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "precip": "Rain chance",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "forecastTitle": "7-Day Forecast",
+    "today": "Today",
+    "updated": "Updated",
+    "umbrellaYes": "Bring an umbrella",
+    "umbrellaNo": "No umbrella needed",
+    "tipText": "Higashiyama weather changes quickly, so a folding umbrella is handy. Stone-paved lanes get slippery in rain or morning dew — wear shoes with good grip.",
+    "uvLabel": "UV",
+    "advice": {
+      "title": "Advice for today's weather",
+      "outfitTitle": "What to wear",
+      "planTitle": "How to plan your day",
+      "itemsTitle": "What to bring",
+      "noRisk": "No notable weather risk today",
+      "windUnit": "Bft",
+      "uvHints": { "low": "low", "moderate": "moderate", "high": "high", "veryHigh": "very high", "extreme": "extreme" },
+      "lines": {
+        "riskThunder": "Thunderstorms expected. Avoid sheltering under trees or in high places, and postpone hikes or high outdoor viewpoints.",
+        "riskHeavyRain": "Heavy rain expected. Avoid valleys, low-lying ground and riverbanks; boats and cable cars may be suspended.",
+        "riskWindHigh": "Winds around force {v} — stay clear of signs, trees and exposed edges.",
+        "riskWindStrong": "Winds around force {v}. Long umbrellas turn inside out easily; a rain jacket works better.",
+        "riskSnow": "Snow is forecast. Steps and slopes may freeze — walk slowly and use the handrails.",
+        "riskFog": "Fog reduces visibility, so distant views are not worth it and photos will look flat.",
+        "riskHeat": "Highs near {v}°C. Keep drinking water and avoid long spells in direct sun.",
+        "riskCold": "Chilly day. Long spells outdoors will feel cold, so dress warmly.",
+        "riskIce": "Cold with precipitation — surfaces may ice over. Wear grippy shoes and watch the steps.",
+        "outfitRain": "Rain is expected: a waterproof jacket and shoes are best, and avoid long trousers.",
+        "outfitHot": "Hot day — light, breathable, light-coloured clothing is most comfortable.",
+        "outfitCold": "Cold day — a thick coat plus something for your neck and hands.",
+        "outfitWind": "Windy — a windproof jacket helps; skip loose long skirts and hats that fly off.",
+        "outfitLight": "Mild and warm: a short-sleeve top plus a thin layer you can add or remove.",
+        "outfitCool": "A little cool: long sleeves with a light jacket.",
+        "outfitComfy": "Comfortable temperatures — long sleeves or a light jacket are fine for long walks.",
+        "outfitDiurnal": "Day-night difference is about {v}°C — bring a layer for the morning and evening.",
+        "outfitHumid": "Humidity around {v}% feels muggy; choose sweat-wicking, breathable fabrics.",
+        "planIndoor": "Outdoor sightseeing is not advisable; boats and cable cars may be suspended, so favour halls, temples and museums indoors.",
+        "planRainDelay": "Favour indoor sights. Higashiyama's stone steps and slopes get slippery, so postpone hikes and trekking.",
+        "planSunny": "Clear and fine — great for outdoor sightseeing and photography, and for sunrise or sunset views.",
+        "planFog": "Thick fog makes distant views pointless; switch to lane strolls and temple visits instead.",
+        "planCloudy": "Soft light is ideal for photos, and with no harsh sun you can stay outdoors for longer.",
+        "planHotNoon": "Avoid the 11:00–15:00 heat peak; early morning and evening are far more comfortable.",
+        "planCold": "Cool day — dress warmly and keep outdoor stops shorter.",
+        "planWind": "Windy — hold onto hats and small items at viewpoints and high ground.",
+        "planUV": "Strong UV — use a parasol or hat around midday and limit long exposure.",
+        "planPopHigh": "About {v}% chance of rain — keep an indoor backup plan ready.",
+        "itemRaincoat": "Rain jacket (better than a long umbrella in wind)",
+        "itemUmbrella": "Folding umbrella",
+        "itemGrip": "Shoes with good grip",
+        "itemSunscreen": "Sunscreen",
+        "itemSunglasses": "Sunglasses",
+        "itemHat": "Hat",
+        "itemWater": "Plenty of water",
+        "itemCoat": "Thick coat",
+        "itemScarf": "Scarf",
+        "itemJacket": "Light jacket",
+        "itemMask": "Face mask",
+        "itemTowel": "Hand towel for sweat"
+      }
+    },
+    "weekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "groups": {
+      "clear": "Clear",
+      "mainlyClear": "Mainly clear",
+      "partlyCloudy": "Partly cloudy",
+      "overcast": "Overcast",
+      "fog": "Fog",
+      "drizzle": "Drizzle",
+      "rain": "Rain",
+      "snow": "Snow",
+      "thunder": "Thunderstorm"
+    }
+  },
+  "amenities": {
+    "title": "Facilities & Practical Information",
+    "subtitle": "A neutral overview of the types of facilities available around Yasaka Pagoda to help you plan your visit.",
+    "neutralNote": "This page does not endorse any particular shop or business. Opening hours and prices are subject to on-site information.",
+    "items": [
+      { "icon": "🚻", "title": "Restrooms (WC)", "text": "Public restrooms are available in the Kiyomizu-dera, Yasaka Shrine and Gion areas. Using restrooms at convenience stores or cafés usually requires a purchase." },
+      { "icon": "🅿️", "title": "Parking", "text": "Paid hourly parking lots (public and private) are scattered nearby. They fill up quickly during cherry-blossom and autumn-leaf seasons and around midday, so public transport is often the better choice." },
+      { "icon": "🍽️", "title": "Dining", "text": "Kiyomizu-zaka, Ninenzaka, Sannenzaka and Gion offer a range of restaurants, sweets shops and cafés, along with many take-out only stalls." },
+      { "icon": "🏨", "title": "Lodging", "text": "Higashiyama Ward, Gion and Shijō-Kawaramachi have ryokan, hotels and guesthouses. Staying within walking distance makes early-morning strolls easier." },
+      { "icon": "🛒", "title": "Shopping & Convenience Stores", "text": "Convenience stores, souvenir shops and drugstores can be found nearby for drinks and light meals." },
+      { "icon": "⛽", "title": "Fuel & EV Charging", "text": "Petrol stations and EV charging points are available in central Kyoto. There are few fuel facilities on the narrow lanes of Higashiyama, so refuel or recharge before heading up." },
+      { "icon": "♿", "title": "Accessibility", "text": "The Kiyomizu and Ninenzaka areas are mostly stone-paved slopes. Visitors using wheelchairs or strollers should check accessible restroom and ramp information in advance." },
+      { "icon": "🏧", "title": "ATMs & Currency Exchange", "text": "ATMs are available at nearby convenience stores and financial institutions. Some small shops accept cash only, so carrying yen is recommended." }
+    ]
+  },
+  "entity": {
+    "officialName": "Hōkan-ji Temple (Yasaka Pagoda)",
+    "officialNameRoman": "Hōkan-ji Temple (Yasaka Pagoda)",
+    "shortName": "Yasaka Pagoda",
+    "introStatement": "<strong>Hōkan-ji Temple (Yasaka Pagoda)</strong> is the landmark five-story wooden pagoda standing at the heart of Kiyomizu, Higashiyama Ward, Kyoto, Japan. The official name <em>Hōkan-ji Temple</em> and the popular name <em>Yasaka Pagoda</em> refer to the same historic site, and the domain <em>yasakapagodakyoto.com</em> also points to this destination.",
+    "aboutTitle": "About Hōkan-ji Temple (Yasaka Pagoda)",
+    "aboutText": "Tradition traces its founding to Prince Shōtoku in 592; the present tower was rebuilt in 1440 and is an Important Cultural Property of Japan. Rising about 46 metres, the wooden five-story pagoda is a living historic landmark that presides over the Kiyomizu–Gion townscape.",
+    "locationTitle": "Location & How to Visit Yasaka Pagoda in Kyoto",
+    "locationText": "388 Yasaka Kamimachi, Kiyomizu, Higashiyama Ward, Kyoto 605-0862, Japan. The pagoda stands between Kiyomizu-dera and Gion, along the stone-paved lanes of Higashiyama. The nearest bus stops are Kiyomizu-michi and Gojō-zaka, both within walking distance.",
+    "nearbyTitle": "Landmarks & Attractions Around Yasaka Pagoda",
+    "nearbyText": "When visiting Hōkan-ji Temple (Yasaka Pagoda), you can easily explore surrounding historical landmarks, especially <strong>Kiyomizu-dera Temple</strong> and <strong>Yasaka Shrine</strong>.",
+    "nearbyLandmarks": [
+      { "name": "Kiyomizu-dera Temple", "url": "https://www.kiyomizudera.or.jp/" },
+      { "name": "Yasaka Shrine", "url": "https://www.yasaka-jinja.or.jp/" },
+      { "name": "Ninenzaka & Sannenzaka", "url": "https://www.city.kyoto.lg.jp/kanko/" },
+      { "name": "Gion · Hanamikōji", "url": "https://www.city.kyoto.lg.jp/kanko/" },
+      { "name": "Kennin-ji Temple", "url": "https://www.kenninji.jp/" }
+    ],
+    "historyTitle": "History & Significance of Hōkan-ji Temple (Yasaka Pagoda)",
+    "historyText": "The temple is traditionally said to have been founded in 592, and the current pagoda was rebuilt in 1440. It survived the Ōnin War and repeated fires, and in 1960 was designated an Important Cultural Property of Japan. It serves as the visual and cultural anchor linking Kiyomizu-dera, Yasaka Shrine and Gion.",
+    "hierarchyLabel": "Geographic hierarchy",
+    "napTitle": "Venue Information (Name, Address, Phone)",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "officialNameLabel": "Official name",
+    "mapTitle": "Map & Location",
+    "tourismText": "For the latest official updates and regional tourism information, visit the ",
+    "tourismLabel": "Kyoto Prefecture / Kyoto City Official Tourism Portal",
+    "tourismAfter": ".",
+    "sourcesTitle": "Sources & References",
+    "sourcesSubtitle": "This page is compiled from the following government and official sources (E-E-A-T).",
+    "copyrightTitle": "Image Rights",
+    "copyrightText": "All images displayed on this website are owned by and credited to their respective photographers.",
+    "faq": [
+      { "q": "Where is Hōkan-ji Temple (Yasaka Pagoda) located?", "a": "It is located at 388 Yasaka Kamimachi, Kiyomizu, Higashiyama Ward, Kyoto 605-0862, Japan. Search Google Maps around 34.9985591°N, 135.7791783°E." },
+      { "q": "Is Yasaka Pagoda free to visit?", "a": "Yes — viewing the pagoda from the surrounding streets is free and available at any time. Only the interior is open on Saturdays and Sundays, 10:00–15:00, and requires a paid admission." },
+      { "q": "What is the official name of Yasaka Pagoda?", "a": "The official name is Hōkan-ji Temple; Yasaka Pagoda is the widely used popular name. Together they refer to the same historic site." },
+      { "q": "What are the phone number and address?", "a": "Phone: +81 75-551-2417. Address: 388 Yasaka Kamimachi, Kiyomizu, Higashiyama Ward, Kyoto 605-0862, Japan." },
+      { "q": "What are the latitude and longitude?", "a": "Latitude 34.9985591, longitude 135.7791783." },
+      { "q": "What attractions are nearby?", "a": "Kiyomizu-dera Temple, Yasaka Shrine, Ninenzaka & Sannenzaka, Gion's Hanamikōji and Kennin-ji Temple are all within walking distance." }
     ]
   }
 }

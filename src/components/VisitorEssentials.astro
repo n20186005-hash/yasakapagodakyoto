@@ -1,0 +1,59 @@
+---
+import { getI18n } from '../i18n/ui';
+
+const { lang, messages } = getI18n(Astro.url);
+const v = messages.visitorEssentials;
+const cards = v.cards ?? [];
+const rules = v.rules ?? [];
+const links = v.links ?? [];
+const updated = new Date().toISOString().slice(0, 10);
+---
+
+<section id="tickets" class="section-padding" style="background: var(--bg-tertiary);" aria-labelledby="tickets-heading">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- Answer-first block: the practical facts a first-time visitor searches for -->
+    <div class="max-w-3xl mb-10">
+      <p class="text-xs uppercase tracking-[0.2em] mb-3" style="color: var(--text-muted);">{v.eyebrow}</p>
+      <h2 id="tickets-heading" class="font-display text-3xl sm:text-4xl font-semibold mb-4" style="color: var(--text-primary);">{v.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{v.answer}</p>
+      <p class="text-xs mt-3" style="color: var(--text-muted);">
+        {v.updatedLabel}: <time datetime={updated}>{updated}</time>
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+      {cards.map((c) => (
+        <div class="rounded-2xl p-6 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+          <div class="text-2xl mb-3" aria-hidden="true">{c.icon}</div>
+          <p class="text-xs uppercase tracking-[0.18em] mb-2" style="color: var(--text-muted);">{c.label}</p>
+          <p class="text-lg font-semibold mb-2" style="color: var(--text-primary);">{c.value}</p>
+          {c.note && <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{c.note}</p>}
+        </div>
+      ))}
+    </div>
+
+    <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-6">
+      <div class="rounded-2xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-display text-xl font-semibold mb-4" style="color: var(--text-primary);">{v.rulesTitle}</h3>
+        <ul class="space-y-3 text-base" style="color: var(--text-secondary);">
+          {rules.map((r) => (
+            <li class="flex gap-3"><span style="color: var(--accent);">✓</span><span>{r}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="rounded-2xl p-6 border" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <h3 class="font-display text-xl font-semibold mb-4" style="color: var(--text-primary);">{v.linksTitle}</h3>
+        <ul class="space-y-3 text-base">
+          {links.map((l) => (
+            <li>
+              <a href={`/${lang}${l.href}`} class="underline decoration-dotted underline-offset-4" style="color: var(--accent);">
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

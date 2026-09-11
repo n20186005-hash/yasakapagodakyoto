@@ -1,0 +1,77 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const a = messages.amenities;
+---
+
+<section id="amenities" class="section section-alt" aria-labelledby="amenities-heading">
+  <div class="container">
+    <h2 id="amenities-heading" class="section-heading">{a.title}</h2>
+    <p class="amenities-sub">{a.subtitle}</p>
+    <ul class="amenity-grid">
+      {a.items.map((it) => (
+        <li class="amenity-card">
+          <span class="amenity-icon" aria-hidden="true">{it.icon}</span>
+          <h3 class="amenity-title">{it.title}</h3>
+          <p class="amenity-text">{it.text}</p>
+        </li>
+      ))}
+    </ul>
+    <p class="amenity-note">{a.neutralNote}</p>
+  </div>
+</section>
+
+<style>
+  .amenities-sub {
+    max-width: 46rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+  }
+  .amenity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .amenity-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .amenity-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  .amenity-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .amenity-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    color: var(--text-primary);
+  }
+  .amenity-text {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+  .amenity-note {
+    margin: 1.75rem auto 0;
+    max-width: 52rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+</style>
+

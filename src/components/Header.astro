@@ -3,6 +3,7 @@ import { getI18n, languagesList, languages } from '../i18n/ui';
 
 const { lang, t, messages } = getI18n(Astro.url);
 const h = messages.header;
+const e = messages.entity;
 const common = messages.common;
 const currentPath = Astro.url.pathname;
 
@@ -13,7 +14,10 @@ const switchTo = (l: string) => (pageSeg ? `/${l}/${pageSeg}` : `/${l}`);
 
 <header class="sticky top-0 z-50 backdrop-blur" style="background: color-mix(in srgb, var(--bg-primary) 85%, transparent); border-bottom: 1px solid var(--border-color);">
   <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 flex items-center justify-between gap-3 md:gap-4">
-    <a href={`/${lang}`} class="font-display text-base sm:text-lg font-semibold leading-tight max-w-[11rem] sm:max-w-none" style="color: var(--text-primary);" set:html={h.siteName}></a>
+    <a href={`/${lang}`} class="flex flex-col leading-tight max-w-[11rem] sm:max-w-none" style="color: var(--text-primary);">
+      <span class="font-display text-base sm:text-lg font-semibold" set:html={h.siteName}></span>
+      <span class="text-[10px] sm:text-xs opacity-80 truncate" set:html={e.officialNameRoman}></span>
+    </a>
 
     <nav class="hidden md:flex items-center gap-4 text-sm lg:gap-5" style="color: var(--text-secondary);">
       <a href={`/${lang}`} class="hover:opacity-70" set:html={h.home}></a>

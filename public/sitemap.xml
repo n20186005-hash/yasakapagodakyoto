@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepages -->
+  <url>
+    <loc>https://yasakapagodakyoto.com/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yasakapagodakyoto.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yasakapagodakyoto.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yasakapagodakyoto.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yasakapagodakyoto.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yasakapagodakyoto.com/ko/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yasakapagodakyoto.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yasakapagodakyoto.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yasakapagodakyoto.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yasakapagodakyoto.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yasakapagodakyoto.com/ko/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yasakapagodakyoto.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yasakapagodakyoto.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yasakapagodakyoto.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yasakapagodakyoto.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yasakapagodakyoto.com/ko/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yasakapagodakyoto.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yasakapagodakyoto.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yasakapagodakyoto.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yasakapagodakyoto.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yasakapagodakyoto.com/ko/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yasakapagodakyoto.com/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yasakapagodakyoto.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://yasakapagodakyoto.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://yasakapagodakyoto.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://yasakapagodakyoto.com/ko/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
+    <loc>https://yasakapagodakyoto.com/ja/privacy-policy/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/zh/privacy-policy/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/en/privacy-policy/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/ko/privacy-policy/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://yasakapagodakyoto.com/ja/terms-of-service/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/zh/terms-of-service/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/en/terms-of-service/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/ko/terms-of-service/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://yasakapagodakyoto.com/ja/cookie-settings/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/zh/cookie-settings/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/en/cookie-settings/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://yasakapagodakyoto.com/ko/cookie-settings/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

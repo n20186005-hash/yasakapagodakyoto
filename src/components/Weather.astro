@@ -1,0 +1,344 @@
+---
+import { getI18n } from '../i18n/ui';
+import { getWeather, WEATHER_URL } from '../lib/weather';
+import { adviceRules } from '../lib/advice';
+const { lang, messages } = getI18n(Astro.url);
+const w = messages.weather;
+const bundle = await getWeather();
+const seed = JSON.stringify(bundle);
+const advice = adviceRules(bundle);
+const lines = ((w.advice?.lines ?? {}) as Record<string, string>);
+const txt = (item: { k: string; v?: string | number }) => {
+  const raw = lines[item.k] ?? '';
+  return item.v === undefined ? raw : raw.split('{v}').join(String(item.v));
+};
+const blocks = [
+  { key: 'outfit', icon: '👕', title: w.advice?.outfitTitle, list: advice.outfit },
+  { key: 'plan', icon: '🗺️', title: w.advice?.planTitle, list: advice.plan },
+  { key: 'items', icon: '🎒', title: w.advice?.itemsTitle, list: advice.items },
+];
+---
+
+<section id="weather" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{w.title}</h2>
+      <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{w.subtitle}</p>
+    </div>
+
+    <div class="weather-card">
+      <!-- Risk alerts: derived from the forecast, only rendered when triggered -->
+      <div id="w-risks" class="advice-risks">
+        {advice.risks.map((r) => (
+          <p class="risk-item">
+            <span aria-hidden="true">⚠️</span>
+            <span>{txt(r)}</span>
+          </p>
+        ))}
+        {advice.risks.length === 0 && (
+          <p class="risk-none">
+            <span aria-hidden="true">✅</span>
+            <span>{w.advice?.noRisk}</span>
+          </p>
+        )}
+      </div>
+
+      <div class="weather-now">
+        <div class="weather-now-main">
+          <span class="weather-icon" id="w-icon" aria-hidden="true">🌤️</span>
+          <div>
+            <div class="weather-temp"><span id="w-temp">—</span><span class="weather-unit">°C</span></div>
+            <div class="weather-cond" id="w-cond">—</div>
+            <div class="weather-updated" id="w-updated"></div>
+          </div>
+        </div>
+        <ul class="weather-meta">
+          <li><span>{w.feelsLike}</span><strong id="w-feels">—</strong></li>
+          <li><span>{w.humidity}</span><strong id="w-humidity">—</strong></li>
+          <li><span>{w.wind}</span><strong id="w-wind">—</strong></li>
+          <li><span>{w.precip}</span><strong id="w-pop">—</strong></li>
+          <li><span>{w.uvLabel}</span><strong id="w-uv">—</strong></li>
+          <li><span>{w.sunrise}</span><strong id="w-sunrise">—</strong></li>
+          <li><span>{w.sunset}</span><strong id="w-sunset">—</strong></li>
+        </ul>
+      </div>
+
+      <!-- Actionable advice: only the rules that actually fire are shown -->
+      <h3 class="advice-title">{w.advice?.title}</h3>
+      <div class="advice-grid" id="w-advice">
+        {blocks.map((b) => (
+          <div class="advice-block" data-advice={b.key}>
+            <p class="advice-head">
+              <span aria-hidden="true">{b.icon}</span>
+              <span>{b.title}</span>
+            </p>
+            <ul class="advice-list">
+              {b.list.map((it) => (
+                <li>{txt(it)}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="weather-forecast-title">{w.forecastTitle}</h3>
+      <div class="weather-forecast" id="w-forecast"></div>
+
+      <p class="weather-tip" id="w-tip">{w.tipText}</p>
+    </div>
+  </div>
+</section>
+
+<script type="application/json" id="weather-seed" is:inline set:html={seed}></script>
+<script
+  type="application/json"
+  id="weather-config"
+  is:inline
+  set:html={JSON.stringify({
+    url: WEATHER_URL,
+    groups: w.groups,
+    weekdays: w.weekdays,
+    labels: { today: w.today, updated: w.updated, umbrellaYes: w.umbrellaYes, umbrellaNo: w.umbrellaNo, windUnit: w.advice?.windUnit },
+    adviceLines: lines,
+    adviceTitles: { outfit: w.advice?.outfitTitle, plan: w.advice?.planTitle, items: w.advice?.itemsTitle },
+    noRisk: w.advice?.noRisk,
+    uvHints: w.advice?.uvHints,
+    adviceFn: adviceRules.toString(),
+  })}
+></script>
+
+<script is:inline>
+  (function () {
+    var seedEl = document.getElementById('weather-seed');
+    var cfgEl = document.getElementById('weather-config');
+    if (!seedEl || !cfgEl) return;
+    var cfg = JSON.parse(cfgEl.textContent || '{}');
+    var data = JSON.parse(seedEl.textContent || 'null');
+    var icons = { clear: '☀️', mainlyClear: '🌤️', partlyCloudy: '⛅', overcast: '☁️', fog: '🌫️', drizzle: '🌦️', rain: '🌧️', snow: '❄️', thunder: '⛈️' };
+    function group(code) {
+      if (code === 0) return 'clear';
+      if (code === 1) return 'mainlyClear';
+      if (code === 2) return 'partlyCloudy';
+      if (code === 3) return 'overcast';
+      if (code === 45 || code === 48) return 'fog';
+      if (code >= 51 && code <= 57) return 'drizzle';
+      if ((code >= 61 && code <= 67) || (code >= 80 && code <= 82)) return 'rain';
+      if ((code >= 71 && code <= 77) || code === 85 || code === 86) return 'snow';
+      if (code >= 95) return 'thunder';
+      return 'overcast';
+    }
+    function label(code) { return (cfg.groups && cfg.groups[group(code)]) || ''; }
+    var adviceFn = null;
+    try { adviceFn = new Function('return (' + cfg.adviceFn + ')')(); } catch (err) { adviceFn = null; }
+    function beaufort(kmh) {
+      if (kmh < 1) return 0; if (kmh < 6) return 1; if (kmh < 12) return 2; if (kmh < 20) return 3;
+      if (kmh < 29) return 4; if (kmh < 39) return 5; if (kmh < 50) return 6; if (kmh < 62) return 7;
+      if (kmh < 75) return 8; if (kmh < 89) return 9; if (kmh < 103) return 10; return 11;
+    }
+    function txt(it) {
+      var raw = (cfg.adviceLines && cfg.adviceLines[it.k]) || '';
+      return it.v === undefined ? raw : String(raw).split('{v}').join(String(it.v));
+    }
+    function uvHint(v) {
+      var h = cfg.uvHints || {};
+      if (v < 3) return h.low || ''; if (v < 6) return h.moderate || '';
+      if (v < 8) return h.high || ''; if (v < 11) return h.veryHigh || ''; return h.extreme || '';
+    }
+    function renderAdvice(b) {
+      if (!adviceFn || !b) return;
+      var adv = adviceFn(b);
+      var riskBox = document.getElementById('w-risks');
+      if (riskBox) {
+        riskBox.innerHTML = '';
+        var risks = (adv && adv.risks) || [];
+        if (risks.length === 0) {
+          riskBox.innerHTML = '<p class="risk-none"><span aria-hidden="true">✅</span><span>' + (cfg.noRisk || '') + '</span></p>';
+        } else {
+          risks.forEach(function (r) {
+            var p = document.createElement('p');
+            p.className = 'risk-item';
+            p.innerHTML = '<span aria-hidden="true">⚠️</span><span>' + txt(r) + '</span>';
+            riskBox.appendChild(p);
+          });
+        }
+      }
+      var grid = document.getElementById('w-advice');
+      if (!grid) return;
+      ['outfit', 'plan', 'items'].forEach(function (key) {
+        var block = grid.querySelector('[data-advice="' + key + '"]');
+        if (!block) return;
+        var list = block.querySelector('.advice-list');
+        if (!list) return;
+        var rows = (adv && adv[key]) || [];
+        list.innerHTML = '';
+        rows.forEach(function (it) {
+          var li = document.createElement('li');
+          li.textContent = txt(it);
+          list.appendChild(li);
+        });
+        block.style.display = rows.length ? '' : 'none';
+      });
+    }
+    function hhmm(iso) { if (!iso || typeof iso !== 'string') return '—'; var i = iso.indexOf('T'); return i === -1 ? '—' : (iso.slice(i + 1, i + 6) || '—'); }
+    function set(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+    function render(b) {
+      if (!b) return;
+      var c = b.current || {}, days = b.days || [], t0 = days[0] || {};
+      set('w-icon', icons[group(c.code)] || '🌤️');
+      set('w-temp', Math.round(c.temp));
+      set('w-cond', label(c.code));
+      set('w-feels', Math.round(c.feels) + '°C');
+      set('w-humidity', Math.round(c.humidity) + '%');
+      var lv = beaufort(Math.max(c.gust || 0, c.wind || 0));
+      set('w-wind', lv + ' ' + ((cfg.labels && cfg.labels.windUnit) || ''));
+      set('w-pop', Math.round(t0.pop || 0) + '%');
+      var uvVal = Math.round(c.uv || 0);
+      set('w-uv', uvVal + (uvHint(uvVal) ? ' · ' + uvHint(uvVal) : ''));
+      set('w-sunrise', hhmm(b.sunrise));
+      set('w-sunset', hhmm(b.sunset));
+      set('current-weather', label(c.code) + ' ' + Math.round(c.temp) + '°C');
+      set('sunset-time', hhmm(b.sunset));
+      set('w-updated', (cfg.labels && cfg.labels.updated ? cfg.labels.updated + ' ' : '') + hhmm(b.updatedAt));
+      var fc = document.getElementById('w-forecast');
+      if (fc) {
+        fc.innerHTML = '';
+        (b.days || []).slice(0, 7).forEach(function (day, i) {
+          var dt = new Date(day.date + 'T00:00:00');
+          var name = i === 0 ? cfg.labels.today : cfg.weekdays[dt.getDay()];
+          var pop = Math.round(day.pop || 0);
+          var tip = pop >= 40 ? cfg.labels.umbrellaYes : cfg.labels.umbrellaNo;
+          var el = document.createElement('div');
+          el.className = 'forecast-day';
+          el.innerHTML =
+            '<span class="fd-name">' + name + '</span>' +
+            '<span class="fd-icon" aria-hidden="true">' + (icons[group(day.code)] || '🌤️') + '</span>' +
+            '<span class="fd-temp">' + Math.round(day.tMax) + '° / ' + Math.round(day.tMin) + '°</span>' +
+            '<span class="fd-pop">💧' + pop + '%</span>' +
+            '<span class="fd-tip">' + tip + '</span>';
+          fc.appendChild(el);
+        });
+      }
+      renderAdvice(b);
+    }
+    render(data);
+    if (!data || !data.updatedAt || (Date.now() - new Date(data.updatedAt).getTime() > 1800000)) {
+      fetch(cfg.url, { cache: 'no-store' })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          var dd = j.daily || {};
+          var days = (dd.time || []).map(function (dt, i) {
+            return {
+              date: dt,
+              code: (dd.weather_code || [])[i],
+              tMax: (dd.temperature_2m_max || [])[i],
+              tMin: (dd.temperature_2m_min || [])[i],
+              pop: (dd.precipitation_probability_max || [])[i],
+              uvMax: (dd.uv_index_max || [])[i],
+              windMax: (dd.wind_speed_10m_max || [])[i],
+              rainSum: (dd.precipitation_sum || [])[i],
+            };
+          });
+          var cu = j.current || {};
+          render({
+            current: {
+              temp: cu.temperature_2m,
+              feels: cu.apparent_temperature,
+              humidity: cu.relative_humidity_2m,
+              wind: cu.wind_speed_10m,
+              gust: cu.wind_gusts_10m,
+              uv: cu.uv_index,
+              cloud: cu.cloud_cover,
+              precip: cu.precipitation,
+              code: cu.weather_code,
+            },
+            days: days,
+            sunrise: (dd.sunrise || [])[0],
+            sunset: (dd.sunset || [])[0],
+            updatedAt: new Date().toISOString(),
+          });
+        })
+        .catch(function () {});
+    }
+  })();
+</script>
+
+<style>
+  .weather-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+  }
+  .weather-now {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .weather-now { grid-template-columns: 0.9fr 1.1fr; align-items: center; }
+  }
+  .weather-now-main { display: flex; align-items: center; gap: 1rem; }
+  .weather-icon { font-size: 3rem; line-height: 1; }
+  .weather-temp { font-size: 2.5rem; font-weight: 700; color: var(--text-primary); line-height: 1.1; }
+  .weather-unit { font-size: 1.25rem; margin-left: 0.15rem; }
+  .weather-cond { color: var(--text-secondary); font-weight: 500; }
+  .weather-updated { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
+  .weather-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .weather-meta li { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px dashed var(--border-color); padding: 0.35rem 0; }
+  .weather-meta strong { color: var(--text-primary); }
+  .weather-forecast-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 1.75rem 0 0.75rem; }
+  .weather-forecast { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.4rem; overflow-x: auto; }
+  .forecast-day { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 0.6rem 0.35rem; border: 1px solid var(--border-color); border-radius: 0.6rem; min-width: 4.5rem; background: var(--bg-secondary); }
+  .fd-name { font-size: 0.75rem; font-weight: 600; color: var(--text-primary); }
+  .fd-icon { font-size: 1.25rem; }
+  .fd-temp { font-size: 0.72rem; color: var(--text-secondary); }
+  .fd-pop { font-size: 0.7rem; color: var(--text-muted); }
+  .fd-tip { font-size: 0.6rem; color: var(--accent); text-align: center; line-height: 1.2; }
+  .weather-tip { margin: 1.5rem 0 0; font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem; }
+  .advice-risks { display: grid; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .risk-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.6rem;
+    background: rgba(190, 45, 45, 0.09);
+    border: 1px solid rgba(190, 45, 45, 0.32);
+    color: #a52120;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .risk-none {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.55rem 0.9rem;
+    border-radius: 0.6rem;
+    background: var(--bg-secondary);
+    border: 1px dashed var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+  .advice-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 1.75rem 0 0.75rem; }
+  .advice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; }
+  .advice-block { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 0.9rem 1rem; }
+  .advice-head { display: flex; align-items: center; gap: 0.4rem; margin: 0 0 0.5rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.02em; color: var(--accent); }
+  .advice-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.4rem; }
+  .advice-list li { position: relative; padding-left: 0.9rem; font-size: 0.88rem; line-height: 1.6; color: var(--text-secondary); }
+  .advice-list li::before { content: '·'; position: absolute; left: 0.25rem; top: -0.1rem; color: var(--accent); font-weight: 700; }
+  :global([data-theme='dark']) .risk-item {
+    background: rgba(255, 110, 110, 0.14);
+    border-color: rgba(255, 110, 110, 0.4);
+    color: #ffb3ad;
+  }
+</style>

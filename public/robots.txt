@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /cookie-settings/
+
+Sitemap: https://yasakapagodakyoto.com/sitemap.xml

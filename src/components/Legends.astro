@@ -1,0 +1,107 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const l = messages.legends;
+---
+
+<section id="legends" class="section section-alt" aria-labelledby="legends-heading">
+  <div class="container">
+    <h2 id="legends-heading" class="section-heading">{l.title}</h2>
+    <p class="legends-sub">{l.subtitle}</p>
+    <ol class="timeline">
+      {l.items.map((it) => (
+        <li class="timeline-item">
+          <span class="timeline-icon" aria-hidden="true">{it.icon}</span>
+          <div class="timeline-body">
+            <p class="timeline-period">{it.period}</p>
+            <h3 class="timeline-title">{it.title}</h3>
+            <p class="timeline-text">{it.text}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+    <p class="legends-disclaimer">{l.disclaimer}</p>
+  </div>
+</section>
+
+<style>
+  .legends-sub {
+    max-width: 46rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+  }
+  .timeline {
+    position: relative;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 52rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 1.1rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 2px;
+    background: var(--border-color);
+  }
+  .timeline-item {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding: 0 0 1.5rem 0;
+  }
+  .timeline-icon {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 2.3rem;
+    height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+  }
+  .timeline-body {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1.15rem;
+    box-shadow: var(--card-shadow);
+    flex: 1;
+  }
+  .timeline-period {
+    margin: 0 0 0.25rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+  .timeline-title {
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .timeline-text {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+  }
+  .legends-disclaimer {
+    margin: 0.5rem auto 0;
+    max-width: 52rem;
+    padding: 0.85rem 1rem;
+    background: rgba(199, 107, 42, 0.07);
+    border: 1px solid var(--border-color);
+    border-radius: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+</style>
