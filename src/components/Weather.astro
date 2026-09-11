@@ -295,13 +295,13 @@ const blocks = [
   .weather-meta li { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px dashed var(--border-color); padding: 0.35rem 0; }
   .weather-meta strong { color: var(--text-primary); }
   .weather-forecast-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 1.75rem 0 0.75rem; }
-  .weather-forecast { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.4rem; overflow-x: auto; }
+  .weather-forecast { display: grid; grid-template-columns: repeat(7, minmax(6rem, 1fr)); gap: 0.4rem; overflow-x: auto; }
   .forecast-day { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 0.6rem 0.35rem; border: 1px solid var(--border-color); border-radius: 0.6rem; min-width: 4.5rem; background: var(--bg-secondary); }
   .fd-name { font-size: 0.75rem; font-weight: 600; color: var(--text-primary); }
   .fd-icon { font-size: 1.25rem; }
   .fd-temp { font-size: 0.72rem; color: var(--text-secondary); }
   .fd-pop { font-size: 0.7rem; color: var(--text-muted); }
-  .fd-tip { font-size: 0.6rem; color: var(--accent); text-align: center; line-height: 1.2; }
+  .fd-tip { font-size: 0.62rem; color: var(--accent); text-align: center; line-height: 1.2; white-space: nowrap; }
   .weather-tip { margin: 1.5rem 0 0; font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 1rem; }
   .advice-risks { display: grid; gap: 0.5rem; margin-bottom: 1.5rem; }
   .risk-item {
