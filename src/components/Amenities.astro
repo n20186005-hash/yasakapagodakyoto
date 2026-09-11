@@ -6,7 +6,7 @@ const a = messages.amenities;
 
 <section id="amenities" class="section section-alt" aria-labelledby="amenities-heading">
   <div class="container">
-    <h2 id="amenities-heading" class="section-heading">{a.title}</h2>
+    <h2 id="amenities-heading" class="section-heading text-center">{a.title}</h2>
     <p class="amenities-sub">{a.subtitle}</p>
     <ul class="amenity-grid">
       {a.items.map((it) => (
@@ -30,7 +30,7 @@ const a = messages.amenities;
   }
   .amenity-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: 1rem;
     list-style: none;
     padding: 0;

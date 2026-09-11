@@ -11,12 +11,15 @@ const bg = '/gallery/yasaka-pagoda-kyoto-1.jpg';
     <div class="max-w-4xl mx-auto px-4 text-center">
       <p class="text-xs uppercase tracking-[0.24em] mb-8 text-white/70">{reviews.featuredTitle}</p>
 
-      <div class="relative min-h-[10rem]">
+      <!-- Stack every quote in the same grid cell: the row grows to the tallest
+           quote so long text never overlaps the title or the dots. -->
+      <div class="grid">
         {featured.map((item, i) => (
           <blockquote
-            class="quote-slide absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-700"
+            class="col-start-1 row-start-1 flex flex-col items-center justify-center transition-opacity duration-700"
             style={`opacity: ${i === 0 ? '1' : '0'}; pointer-events: ${i === 0 ? 'auto' : 'none'};`}
             data-quote-index={i}
+            aria-hidden={i === 0 ? 'false' : 'true'}
           >
             <p class="font-display text-2xl sm:text-3xl font-medium leading-relaxed text-white max-w-3xl">“{item.text}”</p>
             <footer class="mt-6 text-sm text-white/75">{item.source}</footer>
@@ -43,10 +46,12 @@ const bg = '/gallery/yasaka-pagoda-kyoto-1.jpg';
     function show(next) {
       slides[current].style.opacity = '0';
       slides[current].style.pointerEvents = 'none';
+      slides[current].setAttribute('aria-hidden', 'true');
       dots[current].style.background = 'rgba(255,255,255,0.4)';
       current = next;
       slides[current].style.opacity = '1';
       slides[current].style.pointerEvents = 'auto';
+      slides[current].setAttribute('aria-hidden', 'false');
       dots[current].style.background = '#fff';
     }
     function next() { show((current + 1) % slides.length); }

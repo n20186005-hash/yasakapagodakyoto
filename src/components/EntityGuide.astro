@@ -66,7 +66,7 @@ const entityName = e?.officialName ?? entityConfig.fullName;
     margin: 1.25rem 0 2rem;
     padding: 0.875rem 1rem;
     background: var(--card-bg);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     font-size: 0.95rem;
   }
@@ -80,7 +80,7 @@ const entityName = e?.officialName ?? entityConfig.fullName;
   }
   .landmark-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     gap: 0.75rem;
     margin: 1rem 0 2rem;
     padding: 0;
@@ -88,7 +88,7 @@ const entityName = e?.officialName ?? entityConfig.fullName;
   }
   .landmark-list li {
     background: var(--card-bg);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
