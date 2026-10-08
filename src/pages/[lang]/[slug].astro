@@ -1,0 +1,16 @@
+---
+import SubpageLayout from '../../layouts/SubpageLayout.astro';
+import { guides, guideSlugs, type GuideSlug } from '../../content/guides';
+import { languagesList } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return languagesList.flatMap((lang) =>
+    guideSlugs.map((slug) => ({ params: { lang, slug } }))
+  );
+}
+
+const { lang, slug } = Astro.params as { lang: string; slug: GuideSlug };
+const content = guides[slug][lang];
+---
+
+<SubpageLayout title={content.title} description={content.description} slug={slug} content={content} />

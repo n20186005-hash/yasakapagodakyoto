@@ -1,1 +1,12 @@
+# Force the apex (non-www) host as the canonical origin.
+https://www.yasakapagodakyoto.com/* https://yasakapagodakyoto.com/:splat 301
+
+# Normalise locale roots to the trailing-slash canonical form so Google does
+# not index `/en` and `/en/` as two separate URLs.
+/en /en/ 301
+/ja /ja/ 301
+/zh /zh/ 301
+/ko /ko/ 301
+
+# Default locale (Japanese) is served at the root.
 / /ja/ 302

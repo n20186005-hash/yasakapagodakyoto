@@ -36,7 +36,10 @@ export function getI18n(url: URL) {
 export function buildAlternates(path = ''): Record<string, string> {
   const base = 'https://yasakapagodakyoto.com';
   const clean = path.replace(/^\/+/, '').replace(/\/+$/, '');
-  const mk = (l: string) => `${base}/${l}${clean ? '/' + clean : ''}`;
+  // Output a single, consistent canonical form with a trailing slash for every
+  // locale root and sub-page. Google indexes `/en/` and `/en` as two URLs, so we
+  // always point canonical / hreflang / sitemap at the trailing-slash variant.
+  const mk = (l: string) => (clean ? `${base}/${l}/${clean}/` : `${base}/${l}/`);
   return {
     zh: mk('zh'),
     en: mk('en'),

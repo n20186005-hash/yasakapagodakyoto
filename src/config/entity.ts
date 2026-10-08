@@ -63,9 +63,9 @@ export const entityConfig = {
   price: '500',
   priceCurrency: 'JPY',
 
-  /** Aggregate rating (latest public figures) */
+  /** Aggregate rating (latest public figures, synced 2026-10-08) */
   ratingValue: '4.6',
-  reviewCount: '6056',
+  reviewCount: '6162',
 
   /** PWA */
   themeColor: '#0f2015',

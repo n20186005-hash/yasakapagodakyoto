@@ -15,6 +15,13 @@
     "map": "Map",
     "backToHome": "Back to Home"
   },
+  "subpageNav": {
+    "title": "More guides",
+    "tickets": "Tickets & Hours",
+    "photos": "Photo Spots",
+    "access": "How to Get There",
+    "route": "Walking Route"
+  },
   "common": {
     "changeLanguage": "Switch language",
     "toggleTheme": "Toggle theme"
@@ -47,8 +54,8 @@
   "hero": {
     "title": "Hōkan-ji Temple (Yasaka Pagoda) in Kyoto",
     "subtitle": "A five-story wooden pagoda silhouette in Kyoto’s Higashiyama–Kiyomizu townscape: always visible from the streets, and sometimes open for interior visits on weekends (subject to on-site notice).",
-    "rating": "4.6 (6,056)",
-    "reviewCount": "6,056 reviews",
+    "rating": "4.6 (6,162)",
+    "reviewCount": "6,162 reviews",
     "hours": "Sat–Sun 10:00–15:00 (interior)",
     "openMaps": "View on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
@@ -729,10 +736,10 @@
     ],
     "linksTitle": "Related guides",
     "links": [
-      { "label": "Interior visit rules & etiquette", "href": "#visit" },
-      { "label": "Best photo spots & Ninenzaka guide", "href": "#photo-spots" },
-      { "label": "Getting here: bus, train, taxi & parking", "href": "#transport" },
-      { "label": "Yasaka Pagoda FAQ (tickets, hours, interior)", "href": "#faq" }
+      { "label": "Tickets, entrance fee & opening hours", "href": "/en/tickets-opening-hours/" },
+      { "label": "Best photo spots & Ninenzaka guide", "href": "/en/best-photo-spots/" },
+      { "label": "How to get here from Kyoto Station", "href": "/en/how-to-get-there/" },
+      { "label": "Higashiyama walking route", "href": "/en/higashiyama-walking-route/" }
     ]
   },
   "outdoorMuseum": {
@@ -928,7 +935,15 @@
       "rain": "Rain",
       "snow": "Snow",
       "thunder": "Thunderstorm"
-    }
+    },
+    "fallbackTitle": "Kyoto Higashiyama: a four-season visitor guide",
+    "fallbackSubtitle": "Live readings are momentarily unavailable — use this stable seasonal guide to plan your visit to the Yasaka Pagoda.",
+    "seasons": [
+      { "name": "Spring · late March–early April", "text": "Cherry blossoms frame the pagoda and the Ninenzaka stone lanes. Mornings are the least crowded; bring a light layer for cool dawns and blue-hour shots." },
+      { "name": "Summer · June–August", "text": "Kyoto's rainy season (tsuyu) brings humid, wet days — stone paths get slippery, so wear shoes with good grip. Evenings stay pleasant for the illuminated tower." },
+      { "name": "Autumn · mid Nov–early Dec", "text": "Maple colours make this the busiest season. Arrive before 9:00 and avoid weekends where possible; the blue-hour illumination is unmissable." },
+      { "name": "Winter · Dec–February", "text": "Cold, clear days give the sharpest photos and the fewest crowds. Snow is rare but lanes can ice over — dress warmly and watch your step." }
+    ]
   },
   "amenities": {
     "title": "Facilities & Practical Information",
@@ -949,7 +964,7 @@
     "officialName": "Hōkan-ji Temple (Yasaka Pagoda)",
     "officialNameRoman": "Hōkan-ji Temple (Yasaka Pagoda)",
     "shortName": "Yasaka Pagoda",
-    "introStatement": "<strong>Hōkan-ji Temple (Yasaka Pagoda)</strong> is the landmark five-story wooden pagoda standing at the heart of Kiyomizu, Higashiyama Ward, Kyoto, Japan. The official name <em>Hōkan-ji Temple</em> and the popular name <em>Yasaka Pagoda</em> refer to the same historic site, and the domain <em>yasakapagodakyoto.com</em> also points to this destination.",
+    "introStatement": "<strong>Hōkan-ji Temple (Yasaka Pagoda)</strong> is the landmark five-story wooden pagoda standing at the heart of Kiyomizu, Higashiyama Ward, Kyoto, Japan. The official name <em>Hōkan-ji Temple</em> and the popular name <em>Yasaka Pagoda</em> refer to the same historic site.",
     "aboutTitle": "About Hōkan-ji Temple (Yasaka Pagoda)",
     "aboutText": "Tradition traces its founding to Prince Shōtoku in 592; the present tower was rebuilt in 1440 and is an Important Cultural Property of Japan. Rising about 46 metres, the wooden five-story pagoda is a living historic landmark that presides over the Kiyomizu–Gion townscape.",
     "locationTitle": "Location & How to Visit Yasaka Pagoda in Kyoto",

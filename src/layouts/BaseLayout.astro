@@ -135,13 +135,14 @@ const websiteLd = {
 
 const breadcrumbLd = (() => {
   const bc = messages.breadcrumb;
+  const home = `${entityConfig.baseUrl}/${lang}/`;
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: bc.home, item: `https://yasakapagodakyoto.com/${lang}` },
-      { '@type': 'ListItem', position: 2, name: bc.kyoto, item: `https://yasakapagodakyoto.com/${lang}#overview` },
-      { '@type': 'ListItem', position: 3, name: bc.higashiyama, item: `https://yasakapagodakyoto.com/${lang}#transport` },
+      { '@type': 'ListItem', position: 1, name: bc.home, item: home },
+      { '@type': 'ListItem', position: 2, name: bc.kyoto, item: `${home}#transport` },
+      { '@type': 'ListItem', position: 3, name: bc.higashiyama, item: `${home}#transport` },
       { '@type': 'ListItem', position: 4, name: bc.current, item: canonical },
     ],
   };

@@ -15,6 +15,13 @@
     "map": "地図",
     "backToHome": "ホームに戻る"
   },
+  "subpageNav": {
+    "title": "他のガイド",
+    "tickets": "チケット・時間",
+    "photos": "撮影スポット",
+    "access": "アクセス",
+    "route": "散策ルート"
+  },
   "common": {
     "changeLanguage": "言語を切り替え",
     "toggleTheme": "テーマを切り替え"
@@ -47,8 +54,8 @@
   "hero": {
     "title": "京都東山 法観寺（八坂の塔）",
     "subtitle": "京都・東山清水の町並みに立つ木造五重塔のシルエット。外観はいつでも街路から眺められ、週末に内部参拝が可能な場合があります（現地案内優先）。",
-    "rating": "4.6（6,056）",
-    "reviewCount": "口コミ 6,056件",
+    "rating": "4.6（6,162）",
+    "reviewCount": "口コミ 6,162件",
     "hours": "土日 10:00–15:00（内部）",
     "openMaps": "Google マップで見る",
     "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
@@ -729,10 +736,10 @@
     ],
     "linksTitle": "関連ガイド",
     "links": [
-      { "label": "内部見学のルールとマナー", "href": "#visit" },
-      { "label": "撮影スポットと二年坂ガイド", "href": "#photo-spots" },
-      { "label": "アクセス（バス・電車・タクシー・駐車場）", "href": "#transport" },
-      { "label": "よくある質問（チケット・時間・内部）", "href": "#faq" }
+      { "label": "チケット・拝観料・拝観時間", "href": "/ja/tickets-opening-hours/" },
+      { "label": "撮影スポット・二寧坂ガイド", "href": "/ja/best-photo-spots/" },
+      { "label": "京都駅からのアクセス", "href": "/ja/how-to-get-there/" },
+      { "label": "東山散策ルート", "href": "/ja/higashiyama-walking-route/" }
     ]
   },
   "outdoorMuseum": {
@@ -928,7 +935,15 @@
       "rain": "雨",
       "snow": "雪",
       "thunder": "雷雨"
-    }
+    },
+    "fallbackTitle": "京都・東山の四季めぐりガイド",
+    "fallbackSubtitle": "現在、ライブの天気情報を取得できません。八坂の塔のご参観計画には、この季節の目安をお役立てください。",
+    "seasons": [
+      { "name": "春（3月下旬〜4月上旬）", "text": "桜が塔と二寧坂の石畳を彩ります。朝一番がもっとも空いており、肌寒い明け方や藍色の時間帯には軽い羽織物を。" },
+      { "name": "夏（6〜8月）", "text": "京都の梅雨（つゆ）は湿り気と雨が多く、石畳が滑りやすいためすべり止めの靴を。夜のライトアップは涼しく爽やかです。" },
+      { "name": "秋（11月中旬〜12月上旬）", "text": "紅葉の季節がもっとも混みます。9時前のご来訪と週末の回避を。藍色の時間のライトアップは見逃せません。" },
+      { "name": "冬（12〜2月）", "text": "晴天の寒い日は人も少なく写真がいちばん映えます。雪は稀ですが路面が凍ることもあるため、暖かくして足元にお気をつけて。" }
+    ]
   },
   "amenities": {
     "title": "周辺の施設・設備情報",

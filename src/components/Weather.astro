@@ -5,6 +5,10 @@ import { adviceRules } from '../lib/advice';
 const { lang, messages } = getI18n(Astro.url);
 const w = messages.weather;
 const bundle = await getWeather();
+// When the live feed is unavailable (build-time or runtime), we must NOT emit
+// placeholder `—°C` text into indexable HTML — instead show a stable seasonal
+// guide. See SEO report: "hide real-time weather when data is invalid".
+const hasData = bundle != null;
 const seed = JSON.stringify(bundle);
 const advice = adviceRules(bundle);
 const lines = ((w.advice?.lines ?? {}) as Record<string, string>);
@@ -86,6 +90,21 @@ const blocks = [
 
       <p class="weather-tip" id="w-tip">{w.tipText}</p>
     </div>
+    )}
+    {!hasData && (
+    <div class="weather-fallback">
+      <h3 class="wf-title">{w.fallbackTitle}</h3>
+      <p class="wf-note">{w.fallbackSubtitle}</p>
+      <div class="wf-grid">
+        {w.seasons.map((s) => (
+          <div class="wf-card">
+            <p class="wf-name">{s.name}</p>
+            <p class="wf-text">{s.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    )}
   </div>
 </section>
 
@@ -336,6 +355,19 @@ const blocks = [
   .advice-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.4rem; }
   .advice-list li { position: relative; padding-left: 0.9rem; font-size: 0.88rem; line-height: 1.6; color: var(--text-secondary); }
   .advice-list li::before { content: '·'; position: absolute; left: 0.25rem; top: -0.1rem; color: var(--accent); font-weight: 700; }
+  .weather-fallback {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+  }
+  .wf-title { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin: 0 0 0.35rem; }
+  .wf-note { font-size: 0.85rem; color: var(--text-secondary); margin: 0 0 1.1rem; }
+  .wf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; }
+  .wf-card { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 0.9rem 1rem; }
+  .wf-name { font-size: 0.9rem; font-weight: 700; color: var(--accent); margin: 0 0 0.4rem; }
+  .wf-text { font-size: 0.86rem; line-height: 1.65; color: var(--text-secondary); margin: 0; }
   :global([data-theme='dark']) .risk-item {
     background: rgba(255, 110, 110, 0.14);
     border-color: rgba(255, 110, 110, 0.4);

@@ -15,6 +15,13 @@
     "map": "地图",
     "backToHome": "返回首页"
   },
+  "subpageNav": {
+    "title": "更多指南",
+    "tickets": "门票与时间",
+    "photos": "拍照点",
+    "access": "如何到达",
+    "route": "散步路线"
+  },
   "common": {
     "changeLanguage": "切换语言",
     "toggleTheme": "切换主题"
@@ -47,8 +54,8 @@
   "hero": {
     "title": "京都东山・法观寺（八坂之塔）",
     "subtitle": "京都东山清水街区的木造五重塔剪影：外部街巷可随时观赏；若遇周末对外开放，可购票入塔参拜（以现场为准）。",
-    "rating": "4.6（6,056）",
-    "reviewCount": "6,056 条评价",
+    "rating": "4.6（6,162）",
+    "reviewCount": "6,162 条评价",
     "hours": "周六周日 10:00–15:00（内部）",
     "openMaps": "查看 Google 地图位置",
     "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
@@ -729,10 +736,10 @@
     ],
     "linksTitle": "相关指南",
     "links": [
-      { "label": "入塔参观规则与礼仪", "href": "#visit" },
-      { "label": "最佳拍照机位与二年坂攻略", "href": "#photo-spots" },
-      { "label": "交通方式：巴士・地铁・出租车・停车", "href": "#transport" },
-      { "label": "八坂之塔常见问题（门票・时间・入塔）", "href": "#faq" }
+      { "label": "门票、门票价格与开放时间", "href": "/zh/tickets-opening-hours/" },
+      { "label": "最佳拍照点与二年坂指南", "href": "/zh/best-photo-spots/" },
+      { "label": "从京都站如何到达", "href": "/zh/how-to-get-there/" },
+      { "label": "东山散步路线", "href": "/zh/higashiyama-walking-route/" }
     ]
   },
   "outdoorMuseum": {
@@ -928,7 +935,15 @@
       "rain": "雨",
       "snow": "雪",
       "thunder": "雷阵雨"
-    }
+    },
+    "fallbackTitle": "京都东山：四季游览指南",
+    "fallbackSubtitle": "实时天气暂时无法获取——可用这份稳定的季节指南规划八坂之塔之行。",
+    "seasons": [
+      { "name": "春季 · 3月下旬–4月上旬", "text": "樱花点缀宝塔与二年坂石板路。清晨人最少，备一件薄外套应对微凉的清晨与蓝调时刻。" },
+      { "name": "夏季 · 6–8月", "text": "京都梅雨（tsuyu）潮湿多雨，石板路易打滑，请穿防滑鞋。夜晚凉爽，适合拍摄点灯后的宝塔。" },
+      { "name": "秋季 · 11月中旬–12月上旬", "text": "红叶季最为拥挤。尽量9点前到达、避开周末；蓝调时分的灯光秀不可错过。" },
+      { "name": "冬季 · 12–2月", "text": "晴朗寒冷的日子游客最少、拍照最清晰。降雪少见但路面可能结冰——注意保暖、留意脚下。" }
+    ]
   },
   "amenities": {
     "title": "周边设施与实用信息",
@@ -949,7 +964,7 @@
     "officialName": "法观寺（八坂之塔）",
     "officialNameRoman": "Hōkan-ji Temple (Yasaka Pagoda)",
     "shortName": "八坂之塔",
-    "introStatement": "<strong>法观寺（八坂之塔 / Hōkan-ji Temple, Yasaka Pagoda）</strong>坐落于日本京都府京都市东山区清水一带，是东山街区最具代表性的地标。官方全称「法观寺」与俗称「八坂之塔」指向同一处史迹；域名 <em>yasakapagodakyoto.com</em> 中的「Yasaka Pagoda Kyoto」也正是此地。",
+    "introStatement": "<strong>法观寺（八坂之塔 / Hōkan-ji Temple, Yasaka Pagoda）</strong>坐落于日本京都府京都市东山区清水一带，是东山街区最具代表性的地标。官方全称「法观寺」与俗称「八坂之塔」指向同一处史迹。",
     "aboutTitle": "关于法观寺（八坂之塔）",
     "aboutText": "相传由圣德太子创建，现存塔体重建于1440年（室町时代），是日本国重要文化财。高约46米的木造五重塔守护着清水、祇园一带的街巷，被誉为「活着的历史地标」。",
     "locationTitle": "八坂之塔的位置与交通（京都市东山区）",

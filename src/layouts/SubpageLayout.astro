@@ -1,0 +1,210 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl, buildAlternates, htmlLangAttr, getI18n, languagesList } from '../i18n/ui';
+import { ogLocale } from '../config';
+import { entityConfig } from '../config/entity';
+import { guideSlugs, type GuideContent, type GuideSlug } from '../content/guides';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  content: GuideContent;
+}
+
+const { title, description, slug, content } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const htmlLang = htmlLangAttr(lang);
+const alts = buildAlternates(slug);
+const canonical = alts[lang] ?? alts.en;
+const { messages } = getI18n(Astro.url);
+const ogLocaleValue = ogLocale[lang] ?? lang;
+
+const homeUrl = `${entityConfig.baseUrl}/${lang}/`;
+const heroImageAbsolute = entityConfig.baseUrl + entityConfig.heroImage;
+
+const entityName = messages.entity?.officialName ?? entityConfig.fullName;
+
+// Other guide slugs, for internal cross-linking (no keyword cannibalisation).
+const otherSlugs = guideSlugs.filter((s) => s !== (slug as GuideSlug));
+const guideLabels: Record<GuideSlug, string> = {
+  'tickets-opening-hours': messages.subpageNav?.tickets ?? 'Tickets & Hours',
+  'best-photo-spots': messages.subpageNav?.photos ?? 'Photo Spots',
+  'how-to-get-there': messages.subpageNav?.access ?? 'How to Get There',
+  'higashiyama-walking-route': messages.subpageNav?.route ?? 'Walking Route',
+};
+
+const faqLd = content.faq?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: content.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    }
+  : null;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  '@id': `${entityConfig.baseUrl}/#attraction`,
+  name: entityName,
+  alternateName: [entityConfig.fullName, entityConfig.shortName, '八坂の塔', '法観寺', '야사카 탑'],
+  description,
+  url: canonical,
+  image: entityConfig.galleryImages.map((src) => entityConfig.baseUrl + src),
+  isAccessibleForFree: false,
+  telephone: entityConfig.telephone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: entityConfig.streetAddress,
+    addressLocality: entityConfig.city,
+    addressRegion: entityConfig.province,
+    postalCode: entityConfig.postalCode,
+    addressCountry: entityConfig.countryCode,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: entityConfig.latitude,
+    longitude: entityConfig.longitude,
+  },
+  hasMap: entityConfig.mapsUrl,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: entityConfig.ratingValue,
+    reviewCount: entityConfig.reviewCount,
+  },
+  isPartOf: { '@type': 'WebSite', '@id': `${entityConfig.baseUrl}/#website` },
+};
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${entityConfig.baseUrl}/#website`,
+  name: messages.footer.siteName,
+  url: entityConfig.baseUrl,
+  inLanguage: ogLocaleValue,
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: messages.breadcrumb.home, item: homeUrl },
+    { '@type': 'ListItem', position: 2, name: content.title, item: canonical },
+  ],
+};
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="zh-Hans" href={alts.zh} />
+    <link rel="alternate" hreflang="en" href={alts.en} />
+    <link rel="alternate" hreflang="ja" href={alts.ja} />
+    <link rel="alternate" hreflang="ko" href={alts.ko} />
+    <link rel="alternate" hreflang="x-default" href={alts.xDefault} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={messages.footer.siteName} />
+    <meta property="og:locale" content={ogLocaleValue} />
+    <meta property="og:image" content={heroImageAbsolute} />
+    <meta property="og:image:alt" content={`${entityName} in ${entityConfig.city}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroImageAbsolute} />
+
+    <meta name="theme-color" content={entityConfig.themeColor} />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd)}></script>
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>
+    {faqLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>}
+  </head>
+  <body class="min-h-screen">
+    <Header />
+    <main>
+      <article class="section-padding">
+        <div class="max-w-3xl mx-auto px-4">
+          <nav class="text-sm mb-6" style="color: var(--text-muted);" aria-label="Breadcrumb">
+            <a href={homeUrl} style="color: var(--text-secondary);">{messages.breadcrumb.home}</a>
+            <span aria-hidden="true"> › </span>
+            <span>{content.title}</span>
+          </nav>
+
+          <h1 class="font-display text-3xl sm:text-4xl font-semibold mb-3" style="color: var(--text-primary);">{content.title}</h1>
+          <p class="text-base sm:text-lg leading-relaxed mb-2" style="color: var(--text-secondary);">{description}</p>
+          <p class="text-xs mb-8" style="color: var(--text-muted);">{content.updatedLabel}: 2026-10-08</p>
+
+          <p class="text-base leading-relaxed mb-10" style="color: var(--text-secondary);">{content.intro}</p>
+
+          {
+            content.sections.map((section) => (
+              <section class="mb-10">
+                <h2 class="font-display text-xl sm:text-2xl font-semibold mb-3" style="color: var(--text-primary);">{section.heading}</h2>
+                {section.body && <p class="text-base leading-relaxed mb-3" style="color: var(--text-secondary);">{section.body}</p>}
+                {section.items && (
+                  <ul class="list-disc pl-5 space-y-2 text-base leading-relaxed" style="color: var(--text-secondary);">
+                    {section.items.map((item) => <li>{item}</li>)}
+                  </ul>
+                )}
+                {section.note && (
+                  <p class="text-sm mt-3 p-3 rounded-lg" style="color: var(--text-muted); background: var(--bg-secondary); border: 1px dashed var(--border-color);">{section.note}</p>
+                )}
+              </section>
+            ))
+          }
+
+          {
+            content.faq?.length > 0 && (
+              <section class="mb-10">
+                <h2 class="font-display text-xl sm:text-2xl font-semibold mb-4" style="color: var(--text-primary);">{content.faqTitle}</h2>
+                <div class="space-y-4">
+                  {content.faq.map((item) => (
+                    <div class="rounded-xl p-4" style="background: var(--bg-secondary); border: 1px solid var(--border-color);">
+                      <h3 class="font-semibold mb-1" style="color: var(--text-primary);">{item.q}</h3>
+                      <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{item.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )
+          }
+
+          <section class="mb-6">
+            <h2 class="font-display text-lg font-semibold mb-3" style="color: var(--text-primary);">{messages.subpageNav?.title ?? 'More guides'}</h2>
+            <ul class="grid gap-2 sm:grid-cols-2">
+              <li>
+                <a href={homeUrl} class="block rounded-lg px-3 py-2 border" style="border-color: var(--border-color); color: var(--text-primary);">{messages.breadcrumb.home} · {entityName}</a>
+              </li>
+              {
+                otherSlugs.map((s) => (
+                  <li>
+                    <a href={`/${lang}/${s}/`} class="block rounded-lg px-3 py-2 border" style="border-color: var(--border-color); color: var(--text-primary);">{guideLabels[s]}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>

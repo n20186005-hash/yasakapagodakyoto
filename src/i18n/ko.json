@@ -15,6 +15,13 @@
     "map": "지도",
     "backToHome": "홈으로 돌아가기"
   },
+  "subpageNav": {
+    "title": "다른 가이드",
+    "tickets": "입장료·시간",
+    "photos": "촬영 스팟",
+    "access": "오시는 길",
+    "route": "산책 루트"
+  },
   "common": {
     "changeLanguage": "언어 변경",
     "toggleTheme": "테마 전환"
@@ -47,8 +54,8 @@
   "hero": {
     "title": "교토 히가시야마 법관사(야사카 탑)",
     "subtitle": "교토 히가시야마 기요미즈 거리 풍경 속 목조 오층탑 실루엣. 외부는 언제든 거리에서 볼 수 있고, 주말에 내부 참배가 가능한 경우가 있습니다(현장 안내 우선).",
-    "rating": "4.6 (6,056)",
-    "reviewCount": "후기 6,056건",
+    "rating": "4.6 (6,162)",
+    "reviewCount": "후기 6,162건",
     "hours": "토·일 10:00–15:00 (내부)",
     "openMaps": "Google 지도에서 보기",
     "mapsUrl": "https://maps.app.goo.gl/h1TRULeMbYZtv1od8",
@@ -729,10 +736,10 @@
     ],
     "linksTitle": "관련 가이드",
     "links": [
-      { "label": "내부 관람 규칙과 예절", "href": "#visit" },
-      { "label": "촬영 명소와 니넨자카 가이드", "href": "#photo-spots" },
-      { "label": "교통(버스·전철·택시·주차)", "href": "#transport" },
-      { "label": "자주 묻는 질문(티켓·시간·내부)", "href": "#faq" }
+      { "label": "입장료·시간·개방 요일", "href": "/ko/tickets-opening-hours/" },
+      { "label": "촬영 스팟·이이네자카 가이드", "href": "/ko/best-photo-spots/" },
+      { "label": "교토 역에서 오시는 길", "href": "/ko/how-to-get-there/" },
+      { "label": "히가시야마 산책 루트", "href": "/ko/higashiyama-walking-route/" }
     ]
   },
   "outdoorMuseum": {
@@ -928,7 +935,15 @@
       "rain": "비",
       "snow": "눈",
       "thunder": "뇌우"
-    }
+    },
+    "fallbackTitle": "교토 히가시야마 사계절 방문 가이드",
+    "fallbackSubtitle": "실시간 날씨를 일시적으로 불러올 수 없습니다 — 야사카 탑 방문 계획에는 이 안정적인 계절 가이드를 활용하세요.",
+    "seasons": [
+      { "name": "봄 · 3월 하순~4월 상순", "text": "벚꽃이 탑과 이이네자카 돌계단을 수놓습니다. 아침이 가장 한산하니, 서늘한 새벽과 블루아워용 겉옷을 챙기세요." },
+      { "name": "여름 · 6~8월", "text": "교토 장마(쓰유)는 습하고 비가 잦아 돌길이 미끄러우니 마찰이 좋은 신발을. 밤의 라이트업은 선선하고 좋습니다." },
+      { "name": "가을 · 11월 중순~12월 상순", "text": "단풍 철이 가장 붐빕니다. 9시 전 도착과 주말 피하기를 권장하며, 블루아워 라이트업은 놓치지 마세요." },
+      { "name": "겨울 · 12~2월", "text": "추운 맑은 날이 인도도 적고 사진도 가장 선명합니다. 눈은 드물지만 길이 얼 수 있으니 따뜻하게 입고 발밑을 조심하세요." }
+    ]
   },
   "amenities": {
     "title": "주변 시설 및 실용 정보",
@@ -949,7 +964,7 @@
     "officialName": "법관사 (야사카 탑)",
     "officialNameRoman": "Hōkan-ji Temple (Yasaka Pagoda)",
     "shortName": "야사카 탑",
-    "introStatement": "<strong>법관사 (야사카 탑 / Hōkan-ji Temple, Yasaka Pagoda)</strong>는 일본 교토부 교토시 히가시야마구 기요미즈 중심에 우뚝 선 동산 지역의 랜드마크입니다. 정식 명칭「법관사」와 통칭「야사카 탑」은 동일한 사적을 가리키며, 도메인 <em>yasakapagodakyoto.com</em>의 「Yasaka Pagoda Kyoto」도 이곳을 의미합니다.",
+    "introStatement": "<strong>법관사 (야사카 탑 / Hōkan-ji Temple, Yasaka Pagoda)</strong>는 일본 교토부 교토시 히가시야마구 기요미즈 중심에 우뚝 선 동산 지역의 랜드마크입니다. 정식 명칭「법관사」와 통칭「야사카 탑」은 동일한 사적을 가리킵니다.",
     "aboutTitle": "법관사 (야사카 탑) 소개",
     "aboutText": "쇼토쿠 태자 창건 전승을 지닌 사찰로, 현존 탑체는 1440년(무로마치 시대)에 재건되어 일본국 중요문화재로 지정되어 있습니다. 높이 약 46m의 목조 오층탑은 기요미즈·기온 거리를 지켜보는 '살아 있는 역사적 랜드마크'입니다.",
     "locationTitle": "야사카 탑의 위치와 접근법 (교토시 히가시야마구)",
